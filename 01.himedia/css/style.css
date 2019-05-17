@@ -90,7 +90,7 @@ div#visual_wrap{
 	div#section01_wrap>ul>li>div.card>div.card-body>p.card-text{color:#9a9a9a;font-size:0.8em;}
 
 /*section02*/
-	div#section02_wrap{width: 980px;margin:0 auto;}
+	div#section02_wrap{width: 980px;margin:0 auto;margin-bottom:50px;}
 	div#section02_wrap>ul>li{width: 310px;height: 165px;float:left;margin-right:25px;border:1px solid #dddddd;}
 	div#section02_wrap>ul>li:last-child{margin-right:0;}
 	div#section02_wrap>ul>li>div.card{position:relative;overflow:hidden;}
@@ -99,3 +99,29 @@ div#visual_wrap{
 	div#section02_wrap>ul>li>div.card>div.card-body>h3.card-title{margin-bottom:20px;}
 	div#section02_wrap>ul>li>div.card>div.card-body>p.card-text{margin-bottom:20px;color:#9a9a9a;font-size:0.8em;}
 	div#section02_wrap>ul>li>div.card>div.card-body>p.card-link{color:#4c8ddd;font-size:0.8em;}
+
+/*footer*/
+	footer#main_footer{height: 147px;background-color:#5e5e5e;}
+
+	footer#main_footer>div.footer01_wrap{height: 43px;background-color:#4d4d4d;}
+	footer#main_footer>div.footer01_wrap>div.footer01{width: 980px;margin:0 auto;}
+	footer#main_footer>div.footer01_wrap>div.footer01>ul>li{float:left;position: relative;}
+	footer#main_footer>div.footer01_wrap>div.footer01>ul>li:after{
+		content:"";width: 1px;height: 15px;background-color:#717171;display:block;position: absolute;top:15px;
+	}
+	footer#main_footer>div.footer01_wrap>div.footer01>ul>li:first-child:after{content:"";display:none;}
+	footer#main_footer>div.footer01_wrap>div.footer01>ul>li>a{
+		padding:0 30px;
+		display:block;
+		font-size:0.8em;
+		line-height: 43px;
+		color:#cdcdcd;
+		font-weight:bold;
+	}
+	footer#main_footer>div.footer01_wrap>div.footer01>ul>li:first-child>a{padding-left: 0;}
+
+	footer#main_footer>div.footer02{width: 980px;height: 105px;margin:0 auto;}
+	footer#main_footer>div.footer02>h3.footer_logo,address{float:left;}
+	footer#main_footer>div.footer02>h3.footer_logo{display:block;color:white;line-height:105px;}
+	address{font-style:normal;}
+	footer#main_footer>div.footer02>address>p.footer_text{display:block;color:#cdcdcd;font-size:0.8em;padding:15px 0 15px 65px;}
