@@ -5,7 +5,7 @@ header#main_header{}
 
 /*main_util*/
 header#main_header>div#main_util{
-	border-bottom:1px solid #a3a3a3;
+	border-bottom:1px solid #dddddd;
 	margin-bottom:20px;
 }
 
@@ -64,4 +64,38 @@ div#visual_wrap{
 		position: relative;
 	}
 	.visual .img01{position: absolute;right:0;bottom: 0;}
-	#visual_wrap .img02{position: absolute;left:0;top: 70px;}
+	#visual_wrap .img02{position: absolute;left:0;top: 80px;}
+
+/*visual icon*/
+	div#visual_icon{background-color: #eee; margin-bottom:50px;}
+	div#visual_icon .icon_wrap{width: 980px;margin:0 auto;}
+	div.icon_wrap li{float:left;width: 20%;height: 196px;}
+	div.icon_wrap li:nth-child(1){height: 196px;background-color: #7c99b9;}
+	div.icon_wrap li:nth-child(2){height: 196px;background-color: #4f74a1;}
+	div.icon_wrap li:nth-child(3){height: 196px;background-color: #4b8ce0;}
+	div.icon_wrap li:nth-child(4){height: 196px;background-color: #3db5f2;}
+	div.icon_wrap li:nth-child(5){height: 196px;background-color: #95c8ff;}
+	
+	div.icon_wrap li:hover{background-color: skyblue;cursor:pointer;}
+
+	div#visual_icon .card{padding:15px;}
+	div#visual_icon .card>img{margin:0 auto;}
+	div#visual_icon .card-body{text-align:center;padding-top:13px;color:white;}
+
+/*section01*/
+	div#section01_wrap{width: 980px;margin:0 auto;margin-bottom:25px;}
+	div#section01_wrap>ul>li{float:left;margin-right:25px;}
+	div#section01_wrap>ul>li:last-child{margin-right:0;}
+	div#section01_wrap>ul>li>div.card>div.card-body{border:1px solid #dddddd;border-top:none;padding:20px 15px;}
+	div#section01_wrap>ul>li>div.card>div.card-body>p.card-text{color:#9a9a9a;font-size:0.8em;}
+
+/*section02*/
+	div#section02_wrap{width: 980px;margin:0 auto;}
+	div#section02_wrap>ul>li{width: 310px;height: 165px;float:left;margin-right:25px;border:1px solid #dddddd;}
+	div#section02_wrap>ul>li:last-child{margin-right:0;}
+	div#section02_wrap>ul>li>div.card{position:relative;overflow:hidden;}
+	div#section02_wrap>ul>li>div.card>img{position: absolute;right:-10px;top: 10px;}
+	div#section02_wrap>ul>li>div.card>div.card-body{padding:20px 0 0 15px;position: relative;}
+	div#section02_wrap>ul>li>div.card>div.card-body>h3.card-title{margin-bottom:20px;}
+	div#section02_wrap>ul>li>div.card>div.card-body>p.card-text{margin-bottom:20px;color:#9a9a9a;font-size:0.8em;}
+	div#section02_wrap>ul>li>div.card>div.card-body>p.card-link{color:#4c8ddd;font-size:0.8em;}
