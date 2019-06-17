@@ -376,58 +376,52 @@
 		border: 1px solid #fc564c;
 	}
 
-
-/*ticker*/
-	.ticker_wrap{
-		width: 1200px;height: 60px;background-color: #fff;margin:0 auto;
-		position: relative;margin-bottom:70px;
+/*section2*/
+	/*new ticker*/
+	.section2{
+		width: 1200px;height: 60px;
+		background-color: #fff;
+		margin:0 auto;margin-bottom:70px;
 	}
+	.section2>div{float:left;}
 
-	.ticker_section01{
+	.ticker_box1{
 		width: 300px;height: 60px;
 		background-image: url(../img/ticker_01.jpg);
 		background-position:0 2px;
 		border-right:2px solid #000;
-		position: relative;
-		position: absolute;
-	}
+		position: relative;}
 
-	.ticker01_prevbtn{position: absolute;top: 25px;right:142px;}
-	.ticker_section01>p{
-		position: absolute;right:60px;line-height:60px;
-		font-size:1.2em;
+	.ticker_box1>img{cursor:pointer;}
+	.ticker01_prevbtn{
+		position: absolute;top: 25px;right: 142px;
 	}
-	.ticker01_nextbtn{position: absolute;top: 25px;right:40px;}
+	.ticker01_nextbtn{
+		position: absolute;top: 25px;right:35px;
+	}
+	.ticker_box1>p{
+		font-size:1.2em;line-height: 60px;
+		position: absolute;right:57px;
+	}
+	
+	.ticker_box2>div{width: 860px;}
+	.ticker_box2>div>div{float:left;line-height:60px;cursor:pointer;}
+	.ticker_title{width:35%;text-align:center;color:#606060;}
+	.ticker_text{width: 65%;
+		font-size:0.9em;color:#606060;}
 
-	.ticker_section02{
-		width: 860px;height: 60px;
-		position: absolute;left:300px;
-	}
 
-	.ticker_section02>ul>li{float:left;}
-	.ticker_section02>ul>li.title{width: 310px;}
-	.ticker_section02>ul>li.title>a{
-		display:block;line-height:60px;text-align:center;
-		color:#606060;
-	}
-	.ticker_section02>ul>li.text{width: 540px;height: 60px;}
-	.ticker_section02>ul>li.text>a{
-		display:block;line-height:60px;text-align:center;
-		font-size:0.9em; color:#606060;
-	}
+	.ticker_btn{width: 40px;height: 60px;}
 
 
 	/*button*/
-	.ticker_btn{
-		width: 40px;height: 60px;
-		position: absolute;right:0;
-	}
-	.ticker_btn>a{display:block;height: 30px;}
+	.ticker_btn{display:block;height: 30px;cursor:pointer;}
 	.ticker02_prevbtn{margin-bottom:2px;}
 
 
 /*footer*/
-	.footer{width: 1200px;height: 190px;background-color: #fff;margin:0 auto;}
+	.footer_wrap{}
+	.footer{width: 1200px;margin:0 auto;}
 
 	.footer>ul{padding:0 185px;padding-top:27px;}
 	.footer>ul>li{float:left;position: relative;}
@@ -435,6 +429,6 @@
 	.footer>ul>li:first-child:after{content:"";display:none;}
 	.footer>ul>li>a{display:block;color:#606060;text-align:center;padding:0 15px;}
 
-	.footer p{width: 1200px;text-align:center;}
+	.footer p{text-align:center;}
 	.footer p.text{display:block;padding:20px;font-size:0.8em;color:#9f9f9f;}
-	.footer p.copyright{display:block;font-size:0.8em;color:#606060;}
+	.footer p.copyright{display:block;font-size:0.8em;color:#606060;padding-bottom:27px;}

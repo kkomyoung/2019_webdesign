@@ -27,7 +27,26 @@
 				mainslider.goToNextSlide();
 				return false;
 			});
+
 		});
+
+		$(document).ready(function(){
+			var ticker = $('.ticker_box2').bxSlider({
+				mode:'vertical',
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$('.ticker02_prevbtn').click(function(){
+				ticker.goToPrevSlide();
+				return false
+			});
+			$('.ticker02_nextbtn').click(function(){
+				ticker.goToNextSlide();
+				return false
+			});
+		});
+
 	</script>
 </head>
 <body>
@@ -218,37 +237,33 @@
 					</li>
 				</ul>
 			</div>
-			<!-- ticker -->
-				<div class="ticker_wrap">
-					<div class="ticker_section01">
-						<a href="" class="ticker01_prevbtn">
-							<img src="img/ticker01_prevbtn.gif" alt="이전">
-						</a>
-						<p>2019 07</p>
-						<a href="" class="ticker01_nextbtn">
-							<img src="img/ticker01_nextbtn.gif" alt="다음">
-						</a>
+			<!-- new ticker -->
+			<div class="section2 clearfix">
+				<div class="ticker_box1">
+					<img src="img/ticker01_prevbtn.gif" alt="prev" class="ticker01_prevbtn">
+					<p>2019 07</p>
+					<img src="img/ticker01_nextbtn.gif" alt="다음" class="ticker01_nextbtn">
+				</div>
+				<div class="ticker_box2">
+					<div class="clearfix">
+						<div class="ticker_title">1학기 성적 열람 및 상담 신청</div>
+						<div class="ticker_text">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</div>
 					</div>
-					<div class="ticker_section02">
-						<ul class="clearfix">
-							<li class="title">
-								<a href="#">TICKER 아직 못넣었어요<!-- 2019 - 1학기 성적 열람 및 상담 신청 --></a>
-							</li>
-							<li class="text">
-								<a href="#">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</a>
-							</li>
-						</ul>
+					<div class="clearfix">
+						<div class="ticker_title">2학기 성적 열람 및 상담 신청</div>
+						<div class="ticker_text">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</div>
 					</div>
-
-					<div class="ticker_btn">
-						<a href="" class="ticker02_prevbtn">
-							<img src="img/ticker02_prevbtn.gif" alt="이전">
-						</a>
-						<a href="" class="ticker02_nextbtn">
-							<img src="img/ticker02_nextbtn.gif" alt="다음">
-						</a>
+					<div class="clearfix">
+						<div class="ticker_title">4학기 성적 열람 및 상담 신청</div>
+						<div class="ticker_text">성적열람 및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...</div>
 					</div>
 				</div>
+
+				<div class="ticker_btn">
+					<img src="img/ticker02_prevbtn.gif" alt="이전" class="ticker02_prevbtn">
+					<img src="img/ticker02_nextbtn.gif" alt="다음" class="ticker02_nextbtn">
+				</div>
+			</div>
 		</div>
 
 		<!-- footer -->
