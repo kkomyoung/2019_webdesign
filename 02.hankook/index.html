@@ -28,9 +28,12 @@
 				return false;
 			});
 
-		});
-
-		$(document).ready(function(){
+				$('.box8_slider').bxSlider({
+				touchEnabled:false,
+				controls:false,
+				auto:true
+			});
+	
 			var ticker = $('.ticker_box2').bxSlider({
 				mode:'vertical',
 				controls:false,
@@ -232,8 +235,24 @@
 					</li>
 
 					<li class="box8">
-						<img src="img/box8.jpg" alt="8">
-						<div class="detail_btn"><a href="#">입학사전예약 ▶</a></div>	
+						<div class="box8_slider">
+							<div>
+								<img src="img/box8.jpg" alt="8">
+								<div class="detail_btn"><a href="#">입학사전예약 ▶</a></div>
+							</div>
+							<div>
+								<img src="img/box8.jpg" alt="8">
+								<div class="detail_btn"><a href="#">입학사전예약 ▶</a></div>
+							</div>
+							<div>
+								<img src="img/box8.jpg" alt="8">
+								<div class="detail_btn"><a href="#">입학사전예약 ▶</a></div>
+							</div>
+							<div>
+								<img src="img/box8.jpg" alt="8">
+								<div class="detail_btn"><a href="#">입학사전예약 ▶</a></div>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</div>
