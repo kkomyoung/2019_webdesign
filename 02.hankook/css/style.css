@@ -365,6 +365,7 @@
 	    font-weight: bold;
 	    color: #666;
 	    padding-top: 20px;
+	    height: 30px;
 	}
 
 	.bx-wrapper .bx-pager.bx-default-pager a {
@@ -390,7 +391,7 @@
     	background: #fe4e3f;
 	}
 
-	
+
 	.box8{position:relative;}
 	.box8 .detail_btn{
 		width: 168px;
