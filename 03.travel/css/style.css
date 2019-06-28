@@ -85,30 +85,35 @@ body{min-width:1200px;}
 	/*gnb_menu*/
 	.gnb_menu_wrap{background-color: #fbfbfb;}
 	.gnb_menu{
-		width: 980px;height: 60px;
-		margin:0 auto;
+		height: 60px;position: relative;
 	}
-
-	.gnb_menu li{
-		width: 16.66%;
+	.gnb_menu>ul{padding:0 461px;}
+	.gnb_menu>ul>li{
+		width: 163.3px;
 		float:left;border-right: 1px solid #e6e6e6;
 	}
-	.gnb_menu li:first-child{border-left: 1px solid #e6e6e6;}
-	.gnb_menu a{
+	.gnb_menu>ul>li:first-child{border-left: 1px solid #e6e6e6;}
+	.gnb_menu>ul>li>a{
+		position: relative;
 		display:block;
 		line-height:60px;
 		text-align:center;
 		font-weight:bold;
 
 	}
-	.gnb_menu a:hover{color:#005f9c;}
-	.gnb_menu a.on{color:#005f9c;}
+	.gnb_menu>ul>li>a:hover{color:#005f9c;}
+	.gnb_menu>ul .on{color:#005f9c;}
+
+	.new{
+		position: absolute;top: 18px;
+		right: 30px;width: 20px;height: 20px;
+	}
 
 
 	/*depth2*/
-	.depth2_wrap{
+	.depth2_wrap{display:none;
 		background:rgba(0,0,0,0.5);height: 35px;width: 100%;
-		position: absolute;bottom:-35px;z-index: 1;
+		position: absolute;bottom:-40px;z-index: 1;left: 0;
 	}
 	.depth2{width: 980px;margin:0 auto;position: relative;}
 	.depth2 ul{position: absolute;left:570px;}
@@ -120,7 +125,8 @@ body{min-width:1200px;}
 	}
 	.depth2 a.on{color:white;}
 
-
+	
+	.gnb_menu>ul:hover .depth2_wrap{display:block;}
 
 
 /*index contents*/
@@ -515,5 +521,5 @@ footer.company ul{padding-bottom:15px;}
 footer.company li{float:left;padding-right:25px;}
 footer.company a{display:block;}
 footer.company>p{color:#6d6d6d;font-size:0.8em;}
-footer.company .bold{font-weight:bold;color:black;}
+.bold{font-weight:bold;color:black;}
 
