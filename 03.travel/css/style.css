@@ -87,7 +87,6 @@ body{min-width:1200px;}
 		background-color: #fbfbfb;position: relative;
 		border-bottom:5px solid #0e73a7;
 	}
-/*	.gnb_menu_wrap:after{content:"";height: 5px;background-color: #0e73a7;display:block;}*/
 	.gnb_menu{
 		width: 980px;height: 60px;margin:0 auto;
 	}
@@ -117,6 +116,7 @@ body{min-width:1200px;}
 		display:none;
 		background:rgba(0,0,0,0.5);width: 100%;
 		position: absolute;z-index:2; left: 0;
+		border-top:5px solid #0e73a7;
 	}
 	.depth2{		
 		}
