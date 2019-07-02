@@ -4,7 +4,7 @@ body{min-width:1200px;}
 
 /*header*/
 .header_wrap{position: relative;}
-.header:after{content:"";height: 5px;background-color: #0e73a7;display:block;}
+/*.header:after{content:"";height: 5px;background-color: #0e73a7;display:block;}*/
 
 	/*util_menu*/
 	.util_menu_wrap{
@@ -83,13 +83,17 @@ body{min-width:1200px;}
 	}
 
 	/*gnb_menu*/
-	.gnb_menu_wrap{background-color: #fbfbfb;}
-	.gnb_menu{
-		height: 60px;position: relative;
+	.gnb_menu_wrap{
+		background-color: #fbfbfb;position: relative;
+		border-bottom:5px solid #0e73a7;
 	}
-	.gnb_menu>ul{padding:0 461px;}
+/*	.gnb_menu_wrap:after{content:"";height: 5px;background-color: #0e73a7;display:block;}*/
+	.gnb_menu{
+		width: 980px;height: 60px;margin:0 auto;
+	}
+	.gnb_menu>ul{}
 	.gnb_menu>ul>li{
-		width: 163.3px;
+		width: 16.66%;
 		float:left;border-right: 1px solid #e6e6e6;
 	}
 	.gnb_menu>ul>li:first-child{border-left: 1px solid #e6e6e6;}
@@ -109,24 +113,30 @@ body{min-width:1200px;}
 		right: 30px;width: 20px;height: 20px;
 	}
 
-
-	/*depth2*/
-	.depth2_wrap{display:none;
-		background:rgba(0,0,0,0.5);height: 35px;width: 100%;
-		position: absolute;bottom:-40px;z-index: 1;left: 0;
+	.depth2_wrap{
+		display:none;
+		background:rgba(0,0,0,0.5);width: 100%;
+		position: absolute;z-index:2; left: 0;
 	}
-	.depth2{width: 980px;margin:0 auto;position: relative;}
-	.depth2 ul{position: absolute;left:570px;}
-	.depth2 li{float:left;}
-	.depth2 a{
-		display: block;
+	.depth2{		
+		}
+	
+	.depth2>li{float:left;}
+	.depth2>li>a{
+		display:block;
 		color:#bfc3c6;font-size:0.9em;font-weight:bold;
 		line-height:35px; padding:0 7px;
 	}
 	.depth2 a.on{color:white;}
 
-	
-	.gnb_menu>ul:hover .depth2_wrap{display:block;}
+	.gnb_menu>ul>li:nth-child(1) .depth2{padding-left:375px;}
+	.gnb_menu>ul>li:nth-child(2) .depth2{padding-left:530px;}
+	.gnb_menu>ul>li:nth-child(3) .depth2{padding-left:700px;}
+	.gnb_menu>ul>li:nth-child(4) .depth2{padding-left:870px;}
+	.gnb_menu>ul>li:nth-child(5) .depth2{padding-left:1025px;}
+	.gnb_menu>ul>li:nth-child(6) .depth2{padding-left:1190px;}
+
+	.gnb_menu>ul>li:hover .depth2_wrap{display:block;}
 
 
 /*index contents*/
