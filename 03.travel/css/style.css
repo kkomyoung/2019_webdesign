@@ -160,31 +160,33 @@ body{min-width:1200px;}
 
 	.box1 li{
 		width: 132px;
-		height: 75px;
+		line-height: 72px;
 		display:block;
-		text-indent:-9999px;}
+		/*text-indent:-9999px;*/
+		text-align:center;
+		color:white;
+		font-weight:bold;
+		border-bottom:2px solid #00a7d4;
+		border-top:2px solid #0087bf;
+		background-color: #0099cb;
 
-	.list1{
-		background-image: url(../img/section01.jpg);
-		background-position:0 0;
 	}
 
-	.list2{
-		background-image: url(../img/section01.jpg);
-		background-position:0 -75px;
-	}
-	.list3{
-		background-image: url(../img/section01.jpg);
-		background-position:0 -150px;
-	}
-	.list4{
-		background-image: url(../img/section01.jpg);
-		background-position:0 -225px;
-	}
+	.box1 li:nth-child(1){border-top:0 none;}
+	.box1 li:nth-child(4){border-bottom:0 none;}
+
 
 	.section01 .box2{
 		width: 350px;height: 100%;
+
 	}
+
+
+	.box1 li.active{
+		background-color: #fff;color:#000;
+		box-shadow:2px 2px 10px lightgray;
+	}
+
 
 	
 		/*form*/

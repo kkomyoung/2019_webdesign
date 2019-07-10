@@ -8,8 +8,23 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/wow.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
 	<script>
 		new WOW().init();
+
+		$(document).ready(function(){
+			$(".box_wrap > div").hide();
+			$(".box_wrap > div").eq(0).fadeIn();
+
+			$(".box1 > ul > li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".box1 > ul > li").removeClass();
+				$(this).addClass("active");
+				$(".box_wrap > div").hide();
+				$(".box_wrap > div").eq(liNum).fadeIn();
+			});
+		});
 	</script>
 </head>
 <body>
@@ -126,59 +141,202 @@
 						<!-- section01 -->
 						<div class="section01 clearfix">
 							<div class="box1">
-								<ul>
-									<li class="list1">공항예약</li>
+								<ul class="clearfix">
+									<li class="list1 active">공항예약</li>
 									<li class="list2">호텔예약</li>
 									<li class="list3">렌트카</li>
 									<li class="list4">휴양지</li>
 								</ul>
 							</div>
-							<div class="box2">
-								<form action="update.php" class="box2_form">
-									<ul>
-										<li>
-											<label for="nara">가고싶은 나라를 선택하세요.</label>
-											<select name="country" id="nara">
-												<option value="">선택하세요.</option>
-												<option value="">일본</option>
-												<option value="">미국</option>
-												<option value="">캐나다</option>
-											</select>
-										</li>
-										<li class="date clearfix">
-											<div class="s_date">
-												<label for="s_date">출발일</label>
-												<input type="date" id="s_date">
+							<div class="box_wrap">
+								<div class="box2">
+									<form action="update.php" class="box2_form">
+										<ul>
+											<li>
+												<label for="nara">가고싶은 나라를 선택하세요.</label>
+												<select name="country" id="nara">
+													<option value="">선택하세요.</option>
+													<option value="">일본</option>
+													<option value="">미국</option>
+													<option value="">캐나다</option>
+												</select>
+											</li>
+											<li class="date clearfix">
+												<div class="s_date">
+													<label for="s_date">출발일</label>
+													<input type="date" id="s_date">
+												</div>
+												<div class="c_date">
+													<label for="c_date">도착일</label>
+													<input type="date" id="c_date">
+												</div>
+											</li>
+											<li class="count clearfix">
+												<div class="class">
+													<label for="class">좌석등급</label>
+													<select name="class" id="class">
+													<option value="">선택하세요.</option>
+													<option value="">이코노미</option>
+													<option value="">비즈니스</option>
+													<option value="">퍼스트</option>
+												</select>
+												</div>
+												<div class="adult">
+													<label for="adult">성인</label>
+													<input type="number" id="adult" placeholder="1">
+												</div>
+												<div class="kid">
+													<label for="kid">아이</label>
+													<input type="number" id="kid" placeholder="2">
+												</div>
+											</li>
+											<div class="box2_btn">
+												<img src="img/box2_btn.jpg" alt="검색">
 											</div>
-											<div class="c_date">
-												<label for="c_date">도착일</label>
-												<input type="date" id="c_date">
+										</ul>
+									</form>
+								</div>
+								<div class="box2">
+									<form action="update.php" class="box2_form">
+										<ul>
+											<li>
+												<label for="nara">호텔예약</label>
+												<select name="country" id="nara">
+													<option value="">선택하세요.</option>
+													<option value="">일본</option>
+													<option value="">미국</option>
+													<option value="">캐나다</option>
+												</select>
+											</li>
+											<li class="date clearfix">
+												<div class="s_date">
+													<label for="s_date">출발일</label>
+													<input type="date" id="s_date">
+												</div>
+												<div class="c_date">
+													<label for="c_date">도착일</label>
+													<input type="date" id="c_date">
+												</div>
+											</li>
+											<li class="count clearfix">
+												<div class="class">
+													<label for="class">좌석등급</label>
+													<select name="class" id="class">
+													<option value="">선택하세요.</option>
+													<option value="">이코노미</option>
+													<option value="">비즈니스</option>
+													<option value="">퍼스트</option>
+												</select>
+												</div>
+												<div class="adult">
+													<label for="adult">성인</label>
+													<input type="number" id="adult" placeholder="1">
+												</div>
+												<div class="kid">
+													<label for="kid">아이</label>
+													<input type="number" id="kid" placeholder="2">
+												</div>
+											</li>
+											<div class="box2_btn">
+												<img src="img/box2_btn.jpg" alt="검색">
 											</div>
-										</li>
-										<li class="count clearfix">
-											<div class="class">
-												<label for="class">좌석등급</label>
-												<select name="class" id="class">
-												<option value="">선택하세요.</option>
-												<option value="">이코노미</option>
-												<option value="">비즈니스</option>
-												<option value="">퍼스트</option>
-											</select>
+										</ul>
+									</form>
+								</div>
+								<div class="box2">
+									<form action="update.php" class="box2_form">
+										<ul>
+											<li>
+												<label for="nara">렌트카</label>
+												<select name="country" id="nara">
+													<option value="">선택하세요.</option>
+													<option value="">일본</option>
+													<option value="">미국</option>
+													<option value="">캐나다</option>
+												</select>
+											</li>
+											<li class="date clearfix">
+												<div class="s_date">
+													<label for="s_date">출발일</label>
+													<input type="date" id="s_date">
+												</div>
+												<div class="c_date">
+													<label for="c_date">도착일</label>
+													<input type="date" id="c_date">
+												</div>
+											</li>
+											<li class="count clearfix">
+												<div class="class">
+													<label for="class">좌석등급</label>
+													<select name="class" id="class">
+													<option value="">선택하세요.</option>
+													<option value="">이코노미</option>
+													<option value="">비즈니스</option>
+													<option value="">퍼스트</option>
+												</select>
+												</div>
+												<div class="adult">
+													<label for="adult">성인</label>
+													<input type="number" id="adult" placeholder="1">
+												</div>
+												<div class="kid">
+													<label for="kid">아이</label>
+													<input type="number" id="kid" placeholder="2">
+												</div>
+											</li>
+											<div class="box2_btn">
+												<img src="img/box2_btn.jpg" alt="검색">
 											</div>
-											<div class="adult">
-												<label for="adult">성인</label>
-												<input type="number" id="adult" placeholder="1">
+										</ul>
+									</form>
+								</div>
+								<div class="box2">
+									<form action="update.php" class="box2_form">
+										<ul>
+											<li>
+												<label for="nara">휴양지</label>
+												<select name="country" id="nara">
+													<option value="">선택하세요.</option>
+													<option value="">일본</option>
+													<option value="">미국</option>
+													<option value="">캐나다</option>
+												</select>
+											</li>
+											<li class="date clearfix">
+												<div class="s_date">
+													<label for="s_date">출발일</label>
+													<input type="date" id="s_date">
+												</div>
+												<div class="c_date">
+													<label for="c_date">도착일</label>
+													<input type="date" id="c_date">
+												</div>
+											</li>
+											<li class="count clearfix">
+												<div class="class">
+													<label for="class">좌석등급</label>
+													<select name="class" id="class">
+													<option value="">선택하세요.</option>
+													<option value="">이코노미</option>
+													<option value="">비즈니스</option>
+													<option value="">퍼스트</option>
+												</select>
+												</div>
+												<div class="adult">
+													<label for="adult">성인</label>
+													<input type="number" id="adult" placeholder="1">
+												</div>
+												<div class="kid">
+													<label for="kid">아이</label>
+													<input type="number" id="kid" placeholder="2">
+												</div>
+											</li>
+											<div class="box2_btn">
+												<img src="img/box2_btn.jpg" alt="검색">
 											</div>
-											<div class="kid">
-												<label for="kid">아이</label>
-												<input type="number" id="kid" placeholder="2">
-											</div>
-										</li>
-										<div class="box2_btn">
-											<img src="img/box2_btn.jpg" alt="검색">
-										</div>
-									</ul>
-								</form>
+										</ul>
+									</form>
+								</div>
 							</div>
 						</div>
 
