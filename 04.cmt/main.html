@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>cmt 메인화면</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+		});
+	</script>
+</head>
+<body>
+	<header id="main_header" class="clearfix">
+		<div id="header_top">
+			<h1>LOGO</h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">보안솔루션</a></li>
+					<li><a href="#">보안관제</a></li>
+					<li><a href="#">보안SI</a></li>
+					<li><a href="#">통합유지보수</a></li>
+					<li><a href="#">고객서비스</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="slider_wrap">
+			<ul class="slider">
+				<li class="first">
+					<div class="slider_txt">
+						<h3>Lorem ipsum dolor.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, incidunt.</p>
+					</div>
+				</li>
+				<li class="second">
+					<div class="slider_txt">
+						<h3>Lorem ipsum dolor.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, incidunt.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="content"></div>
+	</header>
+</body>
+</html>
