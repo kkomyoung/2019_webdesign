@@ -18,7 +18,7 @@
 			$(".language > ul > li").click(function(){
 				var liNum = $(this).index();
 				console.log(liNum);
-				$("language > ul > li").removeClass("");
+				$(".language > ul > li").removeClass();
 				$(this).addClass("active");
 			})
 
@@ -108,16 +108,16 @@
 		</div>
 			<div class="contents">
 				<ul class="clearfix">
-					<li class="box1 type1 wow fadeInUp" data-wow-delay="0.2s">
+					<li class="box1 type1 wow fadeInUp">
 						<a href="#">
 							<img src="images/main_icon_01_01.png" alt="img1">
 							<p>뉴스레터 신청하기</p>
 						</a>
 					</li>
-					<li class="box2 wow fadeInUp" data-wow-delay="0.2s">
-						<a href="https://www.youtube.com/embed/wnMl-St1zcE" class="youtube"><img src="images/video_btn.png" alt="video"></a>
+					<li class="box2 wow fadeInUp">
+						<a href="https://www.youtube.com/embed/wnMl-St1zcE" class="youtube" title="영상"><img src="images/video_btn.png" alt="video"></a>
 					</li>
-					<li class="box3 wow fadeInUp" data-wow-delay="0.2s">
+					<li class="box3 wow fadeInUp">
 						<h3>뉴스</h3>
 						<ul class="slider2">
 							<li class="clearfixzz">
@@ -138,30 +138,30 @@
 						</ul>
 						<div class="box3_btn clearfix">
 								<div class="prev"><a href="javascript:void(0)">이전</a></div>
-								<div class=next><a href="javascript:void(0)">다음</a></div>
+								<div class="next"><a href="javascript:void(0)">다음</a></div>
 							</div>
 					</li>
 					
-					<li class="box4 type2 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box4 type2 wow fadeInUp" data-wow-delay="0.2s">
 						<a href="#">
 							<img src="images/main_icon_01_02.png" alt="img1">
 							<p>회사소개</p>
 						</a>
 					</li>
-					<li class="box5 type1 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box5 type1 wow fadeInUp" data-wow-delay="0.2s">
 						<a href="#">
 							<img src="images/main_icon_01_03.png" alt="img1">
 							<p>보안관제</p>
 						</a>
 					</li>
-					<li class="box6 type3 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box6 type3 wow fadeInUp" data-wow-delay="0.2s">
 						<p>보안솔루션</p>
 						<h3>
 							고객 환경에 맞는<br>
 							맞춤형 솔루션 제공
 						</h3>
 					</li>
-					<li class="box7 type3 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box7 type3 wow fadeInUp" data-wow-delay="0.3s">
 						<p>보안SI</p>
 						<h3>
 							최적의<br>
@@ -170,26 +170,26 @@
 							서비스 제공
 						</h3>
 					</li>
-					<li class="box8 type3 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box8 type3 wow fadeInUp" data-wow-delay="0.3s">
 						<p>전문성</p>
 						<h3>
 							핵심 보안기술과<br>
 							우수한 전문인력 확보
 						</h3>
 					</li>
-					<li class="box9 type1 wow fadeInUp" data-wow-delay="0.4s">
+					<li class="box9 type1 wow fadeInUp" data-wow-delay="0.3s">
 						<a href="#">
 							<img src="images/main_icon_01_04.png" alt="img1">
 							<p>찾아오시는 길</p>
 						</a>
 					</li>
-					<li class="box10 type2 wow fadeInUp" data-wow-delay="0.8s">
+					<li class="box10 type2 wow fadeInUp" data-wow-delay="0.4s">
 						<a href="#">
 							<img src="images/main_icon_01_05.png" alt="img1">
 							<p>고객CRM</p>
 						</a>
 					</li>
-					<li class="box11 type3 wow fadeInUp" data-wow-delay="0.8s">
+					<li class="box11 type3 wow fadeInUp" data-wow-delay="0.4s">
 						<p>통합유지보수</p>
 						<h3>
 							365일 24시간 무중단<br>
@@ -206,7 +206,7 @@
 			<h4>보안관제 서비스</h4>
 			<ul class="clearfix">
 				<li>
-					<div class="card">
+					<div class="card wow fadeInUp">
 						<img src="images/section2_icon01.png" alt="engineering">
 					<div class="card_body">
 						<h3>PREVENTIVE</h3>
@@ -215,7 +215,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="card">
+					<div class="card wow fadeInUp" data-wow-delay="0.1s">
 						<img src="images/section2_icon02.png" alt="engineering">
 					<div class="card_body">
 						<h3>CONTINUOUS</h3>
@@ -224,7 +224,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="card">
+					<div class="card wow fadeInUp" data-wow-delay="0.2s">
 						<img src="images/section2_icon03.png" alt="engineering">
 					<div class="card_body">
 						<h3>REASONABLE</h3>
@@ -233,7 +233,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="card">
+					<div class="card wow fadeInUp" data-wow-delay="0.3s">
 						<img src="images/section2_icon04.png" alt="engineering">
 					<div class="card_body">
 						<h3>PROFESSIONAL</h3>
@@ -244,5 +244,102 @@
 			</ul>
 		</div>
 	</div>
+	<div id="section_wrap">
+		<div class="section3 wow fadeInUp">
+			<ul class="clearfix">
+				<li class="box1">
+					<div class="btn_wrap clearfix">
+						<div class="prev"><a href="javascript:void(0)">이전</a></div>
+						<div class="next"><a href="javascript:void(0)">다음</a></div>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/7.jpg" alt="이미지">
+				</li>
+				<li class="textBox bottom">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/8.jpg" alt="이미지">
+				</li>
+				<li class="textBox top">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/9.jpg" alt="이미지">
+				</li>
+				<li class="textBox top">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="section4 wow fadeInUp" data-wow-delay="0.2s">
+			<ul class="clearfix">
+				<li class="box01">
+					<h3>지속가능경영</h3>
+					<p>
+						사람과 생활에 행복을 주는 기업으로<br>함께 하겠습니다.
+					</p>
+					<div class="detail_btn"><a href="#">자세히 보기</a></div>
+				</li>
+				<li class="box02">
+					<h3>인재채용</h3>
+					<p>
+						창의력을 발휘하여 발전하는<br>인재를 기다립니다.
+					</p>
+					<div class="detail_btn"><a href="#">자세히 보기</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<div id="footer_wrap">
+			<img src="images/footer_logo.png" alt="로고">
+			<ul class="clearfix">
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">상담문의</a></li>
+				<li><a href="#">사이트맵</a></li>
+			</ul>
+			<p>
+				(12345) 서울특별시 강남구 강남북로 1234 강남타워 22층 대표이사 : 홍길동<br>
+				사업자등록번호 : 123-45-33456 통신판매업신고번호 : 제 2020-2020202호 개인정보 보호 책임자 : 홍길동 (admin@company.com)<br>
+				COPYRIGHT(C) 2020 BY COMPANY ALL RIGHTS RESERVED.
+			</p>
+			<div class="site_btn"><a href="#">FAMILY SITE</a></div>
+		</div>
+	</footer>
 </body>
 </html>
