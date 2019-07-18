@@ -13,6 +13,7 @@
 	<script src="js/wow.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> 
 	<script>
 		$(document).ready(function(){
 			$(".language > ul > li").click(function(){
@@ -20,7 +21,7 @@
 				console.log(liNum);
 				$(".language > ul > li").removeClass();
 				$(this).addClass("active");
-			})
+			});
 
 			var myslider =$('.slider').bxSlider({
 				mode:'horizontal',
@@ -58,20 +59,14 @@
 		new WOW().init();
 
 	</script>
-	<style>
-		#cboxContent {
-    background: none;
-    overflow: hidden;
-	}
-	</style>
 </head>
 <body>
 	<header id="main_header" class="clearfix">
 		<div id="header_top">
-			<a href="#"><img src="images/logo.png" alt="logo"></a>
+			<a href="main.html"><img src="images/logo.png" alt="logo"></a>
 			<nav id="main_menu">
 				<ul class="clearfix">
-					<li><a href="#">회사소개</a></li>
+					<li><a href="sub01.html">회사소개</a></li>
 					<li><a href="#">보안솔루션</a></li>
 					<li><a href="#">보안관제</a></li>
 					<li><a href="#">보안SI</a></li>
@@ -115,7 +110,10 @@
 						</a>
 					</li>
 					<li class="box2 wow fadeInUp">
-						<a href="https://www.youtube.com/embed/wnMl-St1zcE" class="youtube" title="영상"><img src="images/video_btn.png" alt="video"></a>
+						<a href="https://www.youtube.com/embed/wnMl-St1zcE" class="youtube">
+							<img src="images/1.jpg" alt="img" class="img">
+							<img src="images/video_btn.png" alt="video" class="video_btn">
+						</a>
 					</li>
 					<li class="box3 wow fadeInUp">
 						<h3>뉴스</h3>
@@ -324,9 +322,9 @@
 	</div>
 	<footer>
 		<div id="footer_wrap">
-			<img src="images/footer_logo.png" alt="로고">
+			<a href="main.html"><img src="images/footer_logo.png" alt="로고"></a>
 			<ul class="clearfix">
-				<li><a href="#">회사소개</a></li>
+				<li><a href="sub01.html">회사소개</a></li>
 				<li><a href="#">개인정보처리방침</a></li>
 				<li><a href="#">이용약관</a></li>
 				<li><a href="#">고객센터</a></li>
@@ -338,8 +336,17 @@
 				사업자등록번호 : 123-45-33456 <br>통신판매업신고번호 : 제 2020-2020202호 개인정보 보호 책임자 : 홍길동 (admin@company.com)<br>
 				COPYRIGHT(C) 2020 BY COMPANY ALL RIGHTS RESERVED.
 			</p>
-			<div class="site_btn"><a href="#">FAMILY SITE</a></div>
+			<div class="site_btn">
+				<label for="site"></label>
+				<select name="site" id="site">
+					<option value="">FAMILY SITE</option>
+					<option value="">CMT정보통신</option>
+					<option value="">관리자페이지</option>
+				</select>
+			</div>
 		</div>
 	</footer>
 </body>
 </html>
+
+												
