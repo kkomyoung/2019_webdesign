@@ -23,18 +23,28 @@
 				$(".language > ul > li").removeClass();
 				$(this).addClass("active");
 			});
+
+			$(".depth2 > ul > li").click(function(){
+				var liNum = $(this).index();
+				console.log( liNum );
+				$(".depth2 > ul > li").removeClass();
+				$(this).addClass("on")
+				$("#sub_contents>div").hide();
+				$("#sub_contents>div").eq(liNum).fadeIn();
+			});
 		});
 
 		new WOW().init();
 
+
 	</script>
 <body>
-	<header id="main_header" class="clearfix">
+	<header id="sub_header" class="clearfix">
 		<div id="header_top">
 			<a href="main.html"><img src="images/logo.png" alt="logo"></a>
 			<nav id="main_menu">
 				<ul class="clearfix">
-					<li><a href="sub01.html">회사소개</a></li>
+					<li class="on"><a href="sub01.html">회사소개</a></li>
 					<li><a href="#">보안솔루션</a></li>
 					<li><a href="#">보안관제</a></li>
 					<li><a href="#">보안SI</a></li>
@@ -57,13 +67,81 @@
 		</div>
 		<div class="depth2">
 			<ul class="clearfix">
-				<li><a href="#" class="on">회사개요</a></li>
-				<li><a href="#">조직도</a></li>
-				<li><a href="#">인력채용</a></li>
-				<li><a href="#">찾아오시는 길</a></li>
+				<li class="on">회사개요</li>
+				<li>조직도</li>
+				<li>인력채용</li>
+				<li>찾아오시는 길</li>
 			</ul>
 		</div>
 	</header>
+	<div id="sub_contents">
+		<div class="contents_wrap">
+			<div class="location">
+				<ul class="clearfix">
+					<li ><a href="main.html"><img src="images/location_home.png" alt="home"></a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">회사소개</a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">회사개요</a></li>
+				</ul>
+			</div>
+			<div class="section01">
+				<div class="title">
+					<h3>회사개요</h3>
+				</div>
+				<img src="images/sub01_01.jpg" alt="img">
+			</div>
+		</div>
+		<div class="contents_wrap">
+			<div class="location">
+				<ul class="clearfix">
+					<li ><a href="main.html"><img src="images/location_home.png" alt="home"></a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">회사소개</a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">조직도</a></li>
+				</ul>
+			</div>
+			<div class="section01">
+				<div class="title">
+					<h3>조직도</h3>
+				</div>
+				<img src="images/sub01_02.jpg" alt="img">
+			</div>
+		</div>
+		<div class="contents_wrap">
+			<div class="location">
+				<ul class="clearfix">
+					<li ><a href="main.html"><img src="images/location_home.png" alt="home"></a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">회사소개</a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">인력채용</a></li>
+				</ul>
+			</div>
+			<div class="section01">
+				<div class="title">
+					<h3>인력채용</h3>
+				</div>
+			</div>
+		</div>
+		<div class="contents_wrap">
+			<div class="location">
+				<ul class="clearfix">
+					<li ><a href="main.html"><img src="images/location_home.png" alt="home"></a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">회사소개</a></li>
+					<li><img src="images/location_icon.png" alt="화살표"></li>
+					<li><a href="#">찾아오시는 길</a></li>
+				</ul>
+			</div>
+			<div class="section01">
+				<div class="title">
+					<h3>찾아오시는 길</h3>
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer>
 		<div id="footer_wrap">
 			<a href="main.html"><img src="images/footer_logo.png" alt="로고"></a>
