@@ -327,6 +327,7 @@
 #sub_header .depth2>ul>li:last-child{border-right:0 none;}
 #sub_header .depth2 .on{background-color: #4b75e3;color:white;}
 
+
 	/*sub01*/
 	#sub_header .visual.sub01{
 		background: url(../images/visual01.jpg);
@@ -405,7 +406,7 @@
 	
 	#sub_contents .section01{margin-bottom:80px;}
 	#sub_contents .section01>.title>h3{
-		color:#4b75e3;font-size:2em;text-align:center;margin-bottom:50px;
+		color:#4b75e3;font-size:2em;text-align:center;margin-bottom:70px;
 	}
 	#sub_contents .section01>.title>h3:before{
 		content:"";clear:both;display:block;
@@ -416,7 +417,15 @@
 	#sub_contents>div{display:none;}
 	#sub_contents>div:nth-child(1){display:block;}
 
+	img.sub_img{margin:0 auto;margin-bottom:50px;}
+
 	
+	/*sub06 고객CRM*/
+	a.crm{
+		display:block;width: 300px;line-height:50px;
+		margin:0 auto;text-align:center;border: 1px solid #4b75e3;color:#4b75e3;
+	}
+	a.crm:hover{background-color: #4b75e3;color:white;}
 
 
 
