@@ -25,8 +25,9 @@
 #header_top>#main_menu{position: absolute;right:130px;top: 5px;}
 #main_menu ul li{float:left;}
 #main_menu ul li a{display: block;line-height:50px;padding:0 30px;font-weight:bold;color:white;}
+#main_menu ul li:hover a{color:hotpink;}
 
-.on>a{color:#4b75e3! important;}
+.on>a{color:hotpink! important;}
 
 .language{position: absolute;right:0;top: 5px;}
 .language>ul>li{float:left;width: 50px;height: 50px;border: 1px solid #4b75e3;color:white;text-align:center;line-height:50px;}
@@ -72,7 +73,7 @@
 	background-size:cover;
 }
 .slider_wrap li.second{
-	background:url(../images/mainimg02.jpg) no-repeat center;
+	background:url(../images/mainimg04.jpg) no-repeat center;
 	background-size:cover;
 }
 
