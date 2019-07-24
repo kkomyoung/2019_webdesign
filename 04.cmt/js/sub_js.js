@@ -13,6 +13,7 @@ $(document).ready(function(){
 				$(this).addClass("on")
 				$("#sub_contents>div").hide();
 				$("#sub_contents>div").eq(liNum).fadeIn();
+				return false;
 			});
 		});
 
