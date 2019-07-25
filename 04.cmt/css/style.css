@@ -26,9 +26,14 @@ body{min-width:1260px;}
 #header_top>#main_menu{position: absolute;right:130px;top: 5px;}
 #main_menu ul li{float:left;}
 #main_menu ul li a{display: block;line-height:50px;padding:0 30px;font-weight:bold;color:white;}
-#main_menu ul li:hover a{color:hotpink;}
+#main_menu ul li a:after{
+	content:"";display:block;width:0;height:2px;background-color: yellow;
+	transition:.3s;margin:0 auto;
+}
+#main_menu ul li a:hover:after{width: 100%;}
+#main_menu ul li:hover a{color:yellow;}
 
-.on>a{color:hotpink! important;}
+.on>a{color:yellow! important;}
 
 .language{position: absolute;right:0;top: 5px;}
 .language>ul>li{float:left;width: 50px;height: 50px;border: 1px solid #4b75e3;color:white;text-align:center;line-height:50px;}
