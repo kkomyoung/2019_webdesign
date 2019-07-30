@@ -39,10 +39,11 @@
 			});
 
 			var myslider2 =$('.slider2').bxSlider({
+				mode:'fade',
 				auto:true,
 				touchEnabled:false,
 				controls:false,
-				pager:false
+				pager:false,
 			});
 			$('.prev').click(function(){
 				myslider2.goToPrevSlide();
@@ -54,6 +55,19 @@
 			});
 
 			$(".youtube").colorbox({iframe:true,innerWidth:600,innerHeight:338});
+
+
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass);
+				if(myClass == "toggleMenu"){
+					$(this).addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(this).removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			});
 		});
 
 		new WOW().init();
@@ -74,6 +88,11 @@
 					<li><a href="sub06.html">고객서비스</a></li>
 				</ul>
 			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
 			<div class="language">
 				<ul class="clearfix">
 					<li class="active">KOR</li>
@@ -120,17 +139,17 @@
 						<ul class="slider2">
 							<li class="clearfixzz">
 								<div class="left">
-									초중생에 장학금01<br>6억4천만원 지원 및 초청행사<br> 진행...</div>
+									초중생에 장학금01<br>6억4천만원 지원 및 초청행사 진행...</div>
 								<div class="right"><img src="images/2.jpg" alt="img2"></div>
 							</li>
 							<li class="clearfixzz">
 								<div class="left">
-									초중생에 장학금02<br>6억4천만원 지원 및 초청행사<br>진행...</div>
-								<div class="right"><img src="images/2.jpg" alt="img2"></div>
+									초중생에 장학금02<br>6억4천만원 지원 및 초청행사 진행...</div>
+								<div class="right"><img src="images/img01_02.jpg" alt="img2"></div>
 							</li>
 							<li class="clearfixzz">
 								<div class="left">
-									초중생에 장학금03<br>6억4천만원 지원 및 초청행사<br> 진행...</div>
+									초중생에 장학금03<br>6억4천만원 지원 및 초청행사 진행...</div>
 								<div class="right"><img src="images/2.jpg" alt="img2"></div>
 							</li>
 						</ul>
@@ -139,7 +158,6 @@
 								<div class="next"><a href="javascript:void(0)">다음</a></div>
 							</div>
 					</li>
-					
 					<li class="box4 type2 wow fadeInUp" data-wow-delay="0.2s">
 						<a href="#">
 							<img src="images/main_icon_01_02.png" alt="img1">
@@ -304,17 +322,17 @@
 		<div class="section4 wow fadeInUp" data-wow-delay="0.2s">
 			<ul class="clearfix">
 				<li class="box01">
-					<h3>지속가능경영</h3>
-					<p>
-						사람과 생활에 행복을 주는 기업으로<br>함께 하겠습니다.
-					</p>
+						<h3>지속가능경영</h3>
+						<p>
+							사람과 생활에 행복을 주는 기업으로<br>함께 하겠습니다.
+						</p>
 					<div class="detail_btn"><a href="#">자세히 보기</a></div>
 				</li>
 				<li class="box02">
-					<h3>인재채용</h3>
-					<p>
-						창의력을 발휘하여 발전하는<br>인재를 기다립니다.
-					</p>
+						<h3>인재채용</h3>
+						<p>
+							창의력을 발휘하여 발전하는<br>인재를 기다립니다.
+						</p>
 					<div class="detail_btn"><a href="#">자세히 보기</a></div>
 				</li>
 			</ul>
