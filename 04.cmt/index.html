@@ -2,78 +2,401 @@
 <html lang="ko">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
-	<title>CMT정보통신</title>
+	<title>cmt 메인화면</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fontawesome/css/all.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<style>
-		.menuWrap{
-			position:fixed;width:1260px;left:50%;margin-left:-630px;
-			top:20px;
-		}
-		.topnav{background-color:#333;}
-		.topnav a{display:block;float:left;padding:14px 16px;color:#f2f2f2;}
-		.topnav a:hover{background-color: #ddd;color:#000;}
-		.topnav .icon{float:right;}
-		.topnav .icon{display:none;}
-
-		
-		@media screen and (min-width:769px){
-			.menuWrap{
-			position:fixed;width:1260px;left:50%;margin-left:-630px;top:20px;}
-		}
-		
-		@media screen and (min-width:577px) and (max-width:768px){
-			.menuWrap{
-			position:relative;width:100%;left:0;margin-left:0;top:0;}
-		}
-
-		@media screen and (max-width:576px){
-			.menuWrap{
-			position:relative;width:100%;left:0;margin-left:0;top:0;}
-			.topnav a:not(:first-child){display:none;}
-			.topnav a.icon{display:block}
-			.topnav.responsive{position: relative;}
-			.topnav.responsive .icon{position: absolute;top: 0;right: 0;}
-			.topnav.responsive a{float:none;display:block;}
-		}
-	</style>
-	<!-- <script>  //제이쿼리만 사용, x표시 버튼을 하나더 만들 떄 (복잡해짐)
-		$(document).ready(function(){
-			$(".icon").click(function(){
-				$("#myTopmenu").addClass("responsive");
-			});
-			$(".iconx").click(function(){
-				$("#myTopmenu").removeClass("responsive");
-			});
-		});
-	</script> -->
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"> 
 	<script>
 		$(document).ready(function(){
-			$(".icon").click(function(){
-				var topClass = $("#myTopmenu").attr("class");
-				console.log(topClass);
-				if(topClass == "topnav clearfix"){
-					$("#myTopmenu").addClass("responsive");
+			$(".language > ul > li").click(function(){
+				var liNum = $(this).index();
+				console.log(liNum);
+				$(".language > ul > li").removeClass();
+				$(this).addClass("active");
+			});
+
+			var myslider =$('.slider').bxSlider({
+				mode:'horizontal',
+				auto:true,
+				// touchEnabled:false,
+				controls:false
+			});
+			$('.btn_prev').click(function(){
+				myslider.goToPrevSlide();
+				return false;
+				});
+			$('.btn_next').click(function(){
+				myslider.goToNextSlide();
+				return false;
+			});
+
+			var myslider2 =$('.slider2').bxSlider({
+				mode:'fade',
+				auto:true,
+				touchEnabled:false,
+				controls:false,
+				pager:false,
+			});
+			$('.prev').click(function(){
+				myslider2.goToPrevSlide();
+				return false;
+				});
+			$('.next').click(function(){
+				myslider2.goToNextSlide();
+				return false;
+			});
+
+			$(".youtube").colorbox({iframe:true,innerWidth:600,innerHeight:338});
+
+
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass);
+				if(myClass == "toggleMenu"){
+					$(this).addClass("change");
+					$("#main_menu").stop().animate({right:0},300);
+					$(".back").fadeIn();
 				}else{
-					$("#myTopmenu").removeClass("responsive");
+					$(this).removeClass("change");
+					$("#main_menu").stop().animate({right:"-100%"},300);
+					$(".back").hide();
 				}
 			});
 		});
+
+		new WOW().init();
+
 	</script>
 </head>
 <body>
-	<div class="menuWrap">
-		<div id="myTopmenu" class="topnav clearfix">
-			<a href="#">HOME</a>
-			<a href="#"><i class="fas fa-newspaper"></i> News</a>
-			<a href="#"><i class="fas fa-home"></i> Contact</a>
-			<a href="#"><i class="fas fa-ban"></i> About</a>
-			<a href="#" class="icon"><i class="fas fa-bars"></i></a>
-			<!-- <a href="#" class="iconx"><i class="fas fa-home"></i></a> -->
+	<header id="main_header" class="clearfix">
+		<div id="header_top">
+			<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+			<div class="back"></div>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="sub01.html">회사소개</a></li>
+					<li><a href="sub02.html">보안솔루션</a></li>
+					<li><a href="sub03.html">보안관제</a></li>
+					<li><a href="sub04.html">보안SI</a></li>
+					<li><a href="sub05.html">통합유지보수</a></li>
+					<li><a href="sub06.html">고객서비스</a></li>
+				</ul>
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<div class="language">
+				<ul class="clearfix">
+					<li class="active">KOR</li>
+					<li>ENG</li>
+				</ul>
+			</div>
+		</div>
+		<div class="slider_wrap">
+			<ul class="slider">
+				<li class="first">
+					<div class="slider_txt">
+						<h3>미래를 위한 보안솔루션</h3>
+						<p>Achieve Better, Faster Business Outcomes</p>
+					</div>
+				</li>
+				<li class="second">
+					<div class="slider_txt">
+						<h3>전문성을 갖춘 보안시스템</h3>
+						<p>Achieve Better, Faster Business Outcomes</p>
+					</div>
+				</li>
+			</ul>
+			<div class="bx_btn">
+				<div class="btn_prev"><a href="#"><img src="images/btn_prev.png" alt="prev"></a></div>
+				<div class="btn_next"><a href="#"><img src="images/btn_next.png" alt="next"></a></div>
+			</div>
+		</div>
+			<div id="mobile_contents">
+				<ul>
+					<li>
+						<a href="sub01.html">
+							<img src="images/main_icon_01_02.png" alt="img1">
+							<p>회사소개</p>
+						</a>
+					</li>
+					<li>
+						<a href="sub06.html">
+							<img src="images/main_icon_01_01.png" alt="img1">
+							<p>뉴스레터</p>
+						</a>
+					</li>
+					<li>
+						<a href="sub01.html">
+							<img src="images/main_icon_01_04.png" alt="img1">
+							<p>찾아오시는 길</p>
+						</a>
+					</li>
+					<li>
+						<a href="sub06.html">
+							<img src="images/main_icon_01_05.png" alt="img1">
+							<p>고객CRM</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contents">
+				<ul class="clearfix">
+					<li class="box1 type1 wow fadeInUp">
+						<a href="#">
+							<img src="images/main_icon_01_01.png" alt="img1">
+							<p>뉴스레터 신청하기</p>
+						</a>
+					</li>
+					<li class="box2 wow fadeInUp">
+						<a href="https://www.youtube.com/embed/wnMl-St1zcE" class="youtube">
+							<img src="images/1.jpg" alt="img" class="img">
+							<img src="images/video_btn.png" alt="video" class="video_btn">
+						</a>
+					</li>
+					<li class="box3 wow fadeInUp">
+						<h3>뉴스</h3>
+						<ul class="slider2">
+							<li class="clearfixzz">
+								<div class="left">
+									초중생에 장학금01<br>6억4천만원 지원 및 초청행사 진행...</div>
+								<div class="right"><img src="images/2.jpg" alt="img2"></div>
+							</li>
+							<li class="clearfixzz">
+								<div class="left">
+									초중생에 장학금02<br>6억4천만원 지원 및 초청행사 진행...</div>
+								<div class="right"><img src="images/img01_02.jpg" alt="img2"></div>
+							</li>
+							<li class="clearfixzz">
+								<div class="left">
+									초중생에 장학금03<br>6억4천만원 지원 및 초청행사 진행...</div>
+								<div class="right"><img src="images/2.jpg" alt="img2"></div>
+							</li>
+						</ul>
+						<div class="box3_btn clearfix">
+								<div class="prev"><a href="javascript:void(0)">이전</a></div>
+								<div class="next"><a href="javascript:void(0)">다음</a></div>
+							</div>
+					</li>
+					<li class="box4 type2 wow fadeInUp" data-wow-delay="0.2s">
+						<a href="#">
+							<img src="images/main_icon_01_02.png" alt="img1">
+							<p>회사소개</p>
+						</a>
+					</li>
+					<li class="box5 type1 wow fadeInUp" data-wow-delay="0.2s">
+						<a href="#">
+							<img src="images/main_icon_01_03.png" alt="img1">
+							<p>보안관제</p>
+						</a>
+					</li>
+					<li class="box6 type3 wow fadeInUp" data-wow-delay="0.2s">
+						<p>보안솔루션</p>
+						<h3>
+							고객 환경에 맞는<br>
+							맞춤형 솔루션 제공
+						</h3>
+					</li>
+					<li class="box7 type3 wow fadeInUp" data-wow-delay="0.3s">
+						<p>보안SI</p>
+						<h3>
+							최적의<br>
+							솔루션 구축을<br>
+							통한 보안<br>
+							서비스 제공
+						</h3>
+					</li>
+					<li class="box8 type3 wow fadeInUp" data-wow-delay="0.3s">
+						<p>전문성</p>
+						<h3>
+							핵심 보안기술과<br>
+							우수한 전문인력 확보
+						</h3>
+					</li>
+					<li class="box9 type1 wow fadeInUp" data-wow-delay="0.3s">
+						<a href="#">
+							<img src="images/main_icon_01_04.png" alt="img1">
+							<p>찾아오시는 길</p>
+						</a>
+					</li>
+					<li class="box10 type2 wow fadeInUp" data-wow-delay="0.4s">
+						<a href="#">
+							<img src="images/main_icon_01_05.png" alt="img1">
+							<p>고객CRM</p>
+						</a>
+					</li>
+					<li class="box11 type3 wow fadeInUp" data-wow-delay="0.4s">
+						<p>통합유지보수</p>
+						<h3>
+							365일 24시간 무중단<br>
+							IT 서비스를 제공
+						</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="section2">
+		<div class="contents">
+			<p>CMT</p>
+			<h4>보안관제 서비스</h4>
+			<ul class="clearfix">
+				<li>
+					<div class="card wow fadeInUp">
+						<img src="images/section2_icon01.png" alt="engineering">
+					<div class="card_body">
+						<h3>PREVENTIVE</h3>
+						<p>최신보안기술을 활용한<br>침해사고 예방 및 대웅</p>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp" data-wow-delay="0.1s">
+						<img src="images/section2_icon02.png" alt="engineering">
+					<div class="card_body">
+						<h3>CONTINUOUS</h3>
+						<p>365 실시간 관제를 통한<br>무중단 서비스 실현</p>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp" data-wow-delay="0.2s">
+						<img src="images/section2_icon03.png" alt="engineering">
+					<div class="card_body">
+						<h3>REASONABLE</h3>
+						<p>보안 및 운영을 위한<br>설비 및 투자비용 최소화</p>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp" data-wow-delay="0.3s">
+						<img src="images/section2_icon04.png" alt="engineering">
+					<div class="card_body">
+						<h3>PROFESSIONAL</h3>
+						<p>인건비 절감과 불필요한<br>조직감소 및 보안전문과 활용</p>
+					</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa optio nisi magnam, magni debitis sit doloribus placeat, maiores modi dolorum doloremque voluptas tempore dicta voluptatem vel distinctio similique. In aliquam, sequi voluptatibus corrupti quisquam dolores explicabo illo quae libero animi a quam id non inventore, sint repellat voluptatum ipsum sed delectus voluptatem totam, adipisci molestiae. Distinctio ipsum molestias magni illum vitae adipisci fuga aspernatur, beatae, blanditiis ratione! Sequi corporis eaque sint quia officia consectetur numquam itaque! Neque ullam deserunt aliquid facilis veritatis, possimus optio ducimus quisquam unde. Nisi corporis veniam voluptatibus illum iusto quam rerum. Fuga saepe eaque vel ipsum illo repudiandae. Voluptate voluptas temporibus optio, delectus facere quibusdam, consequatur laborum inventore voluptatum reiciendis beatae asperiores excepturi molestias consectetur minus ex facilis neque non laboriosam. Et voluptates, consequatur cum. Reprehenderit mollitia eius libero nulla, corporis esse. Blanditiis eius impedit, nesciunt! Laudantium, autem. Quos, numquam quo rerum optio, quas sit veritatis omnis quibusdam ea voluptas cumque rem eligendi eius ratione, maxime voluptates! Architecto sapiente repellat hic, accusamus quasi aspernatur adipisci, reprehenderit eligendi magnam animi facilis saepe sint, dolorem dolores expedita? Assumenda harum consectetur voluptate est esse laudantium, perspiciatis, facilis dolorum tempora, illum fugiat ipsum voluptatum voluptas illo? Totam amet illo odio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, nobis similique cupiditate deleniti illo saepe distinctio ipsum iste voluptas amet dolores rem? Quis reprehenderit quisquam id consequuntur perferendis omnis saepe dolores non voluptatibus, magni cumque inventore temporibus a iure minima, ad ut eaque. Aliquam autem dignissimos rerum pariatur illum error temporibus placeat sed! Animi fugiat voluptas tempore quos aspernatur nesciunt, enim doloremque quod accusamus nihil saepe distinctio cum sunt aperiam, voluptate voluptatibus illo laboriosam amet, dolor, dolorem consectetur? Sit recusandae libero maxime itaque! Culpa reiciendis harum error vero iusto hic deserunt velit, at minus, dolore voluptas praesentium quaerat facere repellat porro, voluptatibus iure. Harum culpa quia, facere doloremque quidem laudantium. Iste qui distinctio placeat, maxime maiores quam. Vero voluptatibus iusto tempora dolorem mollitia fugit veritatis quos voluptas cumque hic saepe, earum sequi repudiandae, nihil expedita id nulla commodi omnis culpa ipsam odit ipsa. Repellendus nesciunt, atque quasi. Vel voluptate delectus neque corrupti sequi, labore debitis aut. Dolor iste voluptatum totam aliquam temporibus, rerum, ea excepturi deserunt provident, maiores neque! Ducimus veniam omnis unde nostrum, alias expedita sequi dolores ullam eos vitae error quasi itaque voluptate beatae dolorem at blanditiis placeat, molestias. Laborum ab dolores ipsam, quis, vel asperiores quam quae tenetur error alias inventore quaerat numquam quod accusantium necessitatibus consequatur praesentium officia, eveniet impedit nobis dolore corporis ullam molestias libero. Iste maxime eos corporis ratione doloremque, cum magni incidunt repellendus deleniti fuga nemo repellat beatae nesciunt nihil! Blanditiis modi quibusdam, repudiandae, officia amet mollitia vitae tenetur dolores illo, maiores perferendis sit quidem ab earum beatae deleniti quia eligendi iure dolor doloribus quos consectetur. Pariatur quas accusantium, doloribus. Iure eveniet, explicabo autem maxime vero, officiis blanditiis voluptate tempora, repellendus in, laborum iusto! Possimus commodi repellendus assumenda beatae quas neque, cumque doloribus blanditiis aut, ad porro enim voluptatem tempora ex vitae. Asperiores.</div>
+	<div id="section_wrap">
+		<div class="section3 wow fadeInUp">
+			<ul class="clearfix">
+				<li class="box1">
+					<div class="btn_wrap clearfix">
+						<div class="prev"><a href="javascript:void(0)">이전</a></div>
+						<div class="next"><a href="javascript:void(0)">다음</a></div>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/7.jpg" alt="이미지">
+				</li>
+				<li class="textBox bottom">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/8.jpg" alt="이미지">
+				</li>
+				<li class="textBox top">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+				<li class="imgBox">
+					<img src="images/9.jpg" alt="이미지">
+				</li>
+				<li class="textBox top">
+					<p>
+						경영실적이 발표 되었습니다.<br>
+						연결 재무 제표 기준
+						매출 46조 8,265억원,
+						영업이익 3조 2,343억원을 기록했는데요.
+						전사 영업이익을 기준으로...
+					</p>
+					<div class="like">
+						<span class="heart">♥</span>
+						<span>101</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="section4 wow fadeInUp" data-wow-delay="0.2s">
+			<ul class="clearfix">
+				<li class="box01">
+						<h3>지속가능경영</h3>
+						<p>
+							사람과 생활에 행복을 주는 기업으로<br>함께 하겠습니다.
+						</p>
+					<div class="detail_btn"><a href="sub01.html">자세히 보기</a></div>
+				</li>
+				<li class="box02">
+						<h3>인재채용</h3>
+						<p>
+							창의력을 발휘하여 발전하는<br>인재를 기다립니다.
+						</p>
+					<div class="detail_btn"><a href="sub01.html">자세히 보기</a></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<div id="footer_wrap">
+			<a href="index.html"><img src="images/footer_logo.png" alt="로고"></a>
+			<ul class="clearfix">
+				<li><a href="sub01.html">회사소개</a></li>
+				<li><a href="sub02.html">개인정보처리방침</a></li>
+				<li><a href="sub03.html">이용약관</a></li>
+				<li><a href="sub04.html">고객센터</a></li>
+				<li><a href="sub05.html">상담문의</a></li>
+				<li><a href="sub06.html">사이트맵</a></li>
+			</ul>
+			<p>
+				(12345) 서울특별시 강남구 강남북로 1234 강남타워 22층 대표이사 : 홍길동
+				사업자등록번호 : 123-45-33456 <br>통신판매업신고번호 : 제 2020-2020202호 개인정보 보호 책임자 : 홍길동 (admin@company.com)<br>
+				COPYRIGHT(C) 2020 BY COMPANY ALL RIGHTS RESERVED.
+			</p>
+			<div class="site_btn">
+				<label for="site"></label>
+				<select name="site" id="site">
+					<option value="">FAMILY SITE</option>
+					<option value="">CMT정보통신</option>
+					<option value="">관리자페이지</option>
+				</select>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
+
+												

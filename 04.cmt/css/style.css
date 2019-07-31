@@ -211,7 +211,7 @@
 	width: 100% !important;
 	background:#000 url(../images/3.jpg) no-repeat center;
 	background-size: 100%;
-	color:white; padding:45px;
+	color:white; padding:20px;
 }
 
 
@@ -225,7 +225,7 @@
 	width: 100% !important;
 	background:#d7dbdc url(../images/5.jpg) no-repeat center;
 	background-size: 100%;
-	color:#000; padding:45px;
+	color:#000; padding:20px;
 }
 .box8.type3>p:after,
 .box11.type3>p:after{
@@ -236,7 +236,7 @@
 	width: 100% !important;
 	background:#000 url(../images/6.jpg) no-repeat center;
 	background-size: 100%;	
-	color:#000; padding:45px;
+	color:#000; padding:20px;
 }
 
 
