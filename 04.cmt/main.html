@@ -62,10 +62,12 @@
 				console.log(myClass);
 				if(myClass == "toggleMenu"){
 					$(this).addClass("change");
-					$("#main_menu").stop().animate({left:0},300);
+					$("#main_menu").stop().animate({right:0},300);
+					$(".back").fadeIn();
 				}else{
 					$(this).removeClass("change");
-					$("#main_menu").stop().animate({left:"-100%"},300)
+					$("#main_menu").stop().animate({right:"-100%"},300);
+					$(".back").hide();
 				}
 			});
 		});
@@ -78,6 +80,7 @@
 	<header id="main_header" class="clearfix">
 		<div id="header_top">
 			<a href="main.html"><img src="images/logo.png" alt="logo"></a>
+			<div class="back"></div>
 			<nav id="main_menu">
 				<ul class="clearfix">
 					<li><a href="sub01.html">회사소개</a></li>

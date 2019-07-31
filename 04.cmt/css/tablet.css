@@ -8,13 +8,17 @@
 }
 #header_top{
 	width:100%;height:70px;
-	position: relative;background-color: #3a3a3a
+	position: relative;background-color: #3f3f3f;
 }
 #header_top img{width: 220px;padding:20px;}
+#header_top>.back{
+	position:fixed;width: 100%;height:100%;background-color:rgba(0,0,0,0.6);
+	z-index:99998;top: 0;display:none;
+}
 #header_top>#main_menu{
-	position:fixed;width: 100%;height:100%;top: 0;
+	position:fixed;width: 80%;height:100%;top: 0;
 	background-color:rgba(75,117,227,1);z-index:99999;
-	left:-100%;
+	right:-100%;
 }
 #main_menu ul{
 	position: absolute;left:50%;top:50%;
@@ -430,7 +434,7 @@
 		width: 100%;
 	}
 
-	#sub_contents .location>ul{}
+	#sub_contents .location>ul{margin-left:20px;}
 	#sub_contents .location>ul>li{float:left;padding:30px 5px;}
 	#sub_contents .location>ul>li:nth-child(3)>a{
 		color:#7d7d7d;}
@@ -451,7 +455,10 @@
 	#sub_contents>div:nth-child(1){display:block;}
 	
 	
-	#sub_contents img.sub_img{width: 100%;margin-bottom:50px;}
+	#sub_contents img.sub_img{
+		width: 100%;margin-bottom:50px;
+		padding:0 20px;
+	}
 
 	
 	/*sub06 고객CRM*/
@@ -470,7 +477,8 @@ footer{border-top:1px solid #000;background-color: #fff;}
 #footer_wrap{
 	width: 100%;padding:20px 20px;
 }
-#footer_wrap>a>img{display:block;margin-bottom:13px;}
+#footer_wrap>a{display:block;margin-bottom:15px;width: 95px;}
+#footer_wrap>a>img{width: 95px;}
 #footer_wrap>ul{margin-bottom:13px;}
 #footer_wrap>ul>li{
 	float:left;position: relative;padding:5px 16px;
@@ -478,7 +486,7 @@ footer{border-top:1px solid #000;background-color: #fff;}
 #footer_wrap>ul>li:first-child{padding-left:0}
 #footer_wrap>ul>li:after{
 	content:"";display:block;width: 1px;height: 15px;background-color: #3f3f3f;
-	position: absolute;top:10px;left:0;
+	position: absolute;top:7px;left:0;
 }
 #footer_wrap>ul>li:first-child:after{content:"";display:none;}
 #footer_wrap>ul>li>a{display:block;color:#3f3f3f;}
