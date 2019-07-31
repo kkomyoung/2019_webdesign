@@ -116,7 +116,7 @@
 	padding:20px 20px 30px 20px; /*box-shadow:0 0 10px #000;*/
 }
 
-.slider_wrap h3{font-size:2.5em;text-shadow:3px 3px 5px #000;}
+.slider_wrap h3{font-size:2.2em;text-shadow:3px 3px 5px #000;}
 .slider_wrap h3:after{
 	content:"";display:block;width:100px;height:3px;background-color: #fff;
 	margin:20px auto;
@@ -141,7 +141,7 @@
 	width:100%;margin:bottom:20px;
 }
 #main_header .contents li{
-	float:left;width:25%;height:220px;
+	float:left;width:25%;height:200px;
 }
 
 
