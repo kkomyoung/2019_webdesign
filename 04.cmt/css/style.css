@@ -1,12 +1,6 @@
 @charset "utf-8";
 @import "pc.css" all and (min-width:961px);
 @import "tablet.css" all and (max-width:960px);
-
-
-
-
-
-
-
 @media all and (max-width:630px){}
 @media all and (max-width:520px){}
+* { font-family: 'NanumSquare', sans-serif !important; }

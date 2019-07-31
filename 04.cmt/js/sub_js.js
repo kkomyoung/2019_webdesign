@@ -16,4 +16,16 @@ $(document).ready(function(){
 				$("#sub_contents>div").eq(liNum).css({display:"block"}).animate({opacity:1});
 				return false;
 			});
+
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass);
+				if(myClass == "toggleMenu"){
+					$(this).addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(this).removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			});
 		});
