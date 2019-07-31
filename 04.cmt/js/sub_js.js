@@ -22,10 +22,12 @@ $(document).ready(function(){
 				console.log(myClass);
 				if(myClass == "toggleMenu"){
 					$(this).addClass("change");
-					$("#main_menu").stop().animate({left:0},300);
+					$("#main_menu").stop().animate({right:0},300);
+					$(".back").fadeIn();
 				}else{
 					$(this).removeClass("change");
-					$("#main_menu").stop().animate({left:"-100%"},300)
+					$("#main_menu").stop().animate({right:"-100%"},300);
+					$(".back").hide();
 				}
 			});
 		});

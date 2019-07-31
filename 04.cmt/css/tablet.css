@@ -10,7 +10,8 @@
 	width:100%;height:70px;
 	position: relative;background-color: #3f3f3f;
 }
-#header_top img{width: 220px;padding:20px;}
+#header_top>a{display:block;width: 185px;padding:20px;}
+#header_top>a>img{width: 185px;}
 #header_top>.back{
 	position:fixed;width: 100%;height:100%;background-color:rgba(0,0,0,0.6);
 	z-index:99998;top: 0;display:none;
@@ -24,7 +25,7 @@
 	position: absolute;left:50%;top:50%;
 	transform:translate(-50%,-50%);
 }
-#main_menu ul li{}
+#main_menu ul li{padding-bottom:10px;}
 #main_menu ul li a{
 	display:block;color:white;text-align:center;
 	font-weight:bold;font-size:2em;line-height:2em;
