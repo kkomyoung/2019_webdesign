@@ -119,6 +119,7 @@ body{min-width:1260px;}
 
 
 /*header content*/
+#mobile_contents{display:none;}
 #main_header .contents{
 	width:1260px;
 	height:1260px;position:absolute;bottom:0;margin-left:-630px;left:50%;

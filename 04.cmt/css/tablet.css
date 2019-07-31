@@ -11,14 +11,25 @@
 	position: relative;background-color: #3a3a3a
 }
 #header_top img{width: 220px;padding:20px;}
-#header_top>#main_menu{display:none;}
-#main_menu ul li{float:left;}
-#main_menu ul li a{display: block;line-height:50px;padding:0 30px;font-weight:bold;color:white;}
+#header_top>#main_menu{
+	position:fixed;width: 100%;height:100%;top: 0;
+	background-color:rgba(75,117,227,1);z-index:99999;
+	left:-100%;
+}
+#main_menu ul{
+	position: absolute;left:50%;top:50%;
+	transform:translate(-50%,-50%);
+}
+#main_menu ul li{}
+#main_menu ul li a{
+	display:block;color:white;text-align:center;
+	font-weight:bold;font-size:2em;line-height:2em;
+}
 #main_menu ul li a:after{
 	content:"";display:block;width:0;height:2px;background-color: yellow;
 	transition:.3s;margin:0 auto;
 }
-#main_menu ul li a:hover:after{width: 100%;}
+#main_menu ul li a:hover:after{width: 30%;}
 #main_menu ul li:hover a{color:yellow;}
 
 .on>a{color:yellow! important;}
@@ -38,6 +49,7 @@
 .toggleMenu .bar2{top:21px;}
 .toggleMenu .bar3{top:31px;}
 
+.toggleMenu.change{position:fixed !important;z-index:999999 !important;}
 .toggleMenu.change .bar1{transform:rotate(-45deg);top:21px;background-color:#fff;}
 .toggleMenu.change .bar2{opacity:0;}
 .toggleMenu.change .bar3{transform:rotate(45deg);top:21px;background-color:#fff;}
@@ -110,10 +122,14 @@
 #main_header .contents{
 	width:100%;
 }
-#main_header .contents li{float:left;width:25%;height:315px;}
+#main_header .contents li{
+	float:left;width:25%;height:315px;
+}
 
 
 /*content*/
+#mobile_contents{width:100%;height: 315px;background-color: #3a3a3a;}
+#mobile_contents>ul>li{float:left;}
 
 
 .box2{position: relative;overflow:hidden;background-color: #000;}
