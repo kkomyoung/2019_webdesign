@@ -30,4 +30,18 @@ $(document).ready(function(){
 					$(".back").hide();
 				}
 			});
+
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize>960){
+					$("#header_top").find(".toggleMenu").removeClass("change");
+					$("#header_top").find(".back").hide();
+				}else{
+					$("#header_top").find(".toggleMenu").removeClass("change");
+					$("#header_top").find(".back").hide();
+					$("#main_menu").css({right:"-100%"});
+				}
+
+			});
 		});

@@ -19,7 +19,7 @@
 #header_top>#main_menu{
 	position:fixed;width: 80%;height:100%;top: 0;
 	background-color:rgba(75,117,227,1);z-index:99999;
-	right:-100%;
+	right:-100%;overflow-y:auto
 }
 #main_menu ul{
 	position: absolute;left:50%;top:50%;
@@ -30,11 +30,7 @@
 	display:block;color:white;text-align:center;
 	font-weight:bold;font-size:2em;line-height:2em;
 }
-#main_menu ul li a:after{
-	content:"";display:block;width:0;height:2px;background-color: yellow;
-	transition:.3s;margin:0 auto;
-}
-#main_menu ul li a:hover:after{width: 30%;}
+
 #main_menu ul li:hover a{color:yellow;}
 
 .on>a{color:yellow! important;}
