@@ -179,7 +179,7 @@
 }
 .box3 .slider2{position:absolute;top:0;left:0;}
 .box3 .slider2 div{float:left;width: 50%;}
-.box3 .slider2 div.left{padding-left:20px; padding-top:55px;font-size:0.9em;}
+.box3 .slider2 div.left{padding:0 20px; padding-top:55px;font-size:0.9em;}
 .box3 .slider2 div.left:after{
 	content:"";border-width:20px;border-style:solid;
 	border-color:transparent transparent transparent #fff;
