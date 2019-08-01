@@ -370,8 +370,7 @@
 	/*sub01*/
 	#sub_header .visual.sub01{
 		background: url(../images/visual01.jpg) no-repeat center;
-		height: 240px;
-		background-size:cover;
+		height: 240px;background-size:cover;
 	}
 	#sub_header .depth2.sub01>ul>li{
 		float:left;width: 25%;border-right:1px solid #a3a3a3;font-size:0.9em;
@@ -380,8 +379,8 @@
 
 	/*sub02*/
 	#sub_header .visual.sub02{
-		background: url(../images/visual02.jpg);
-		height: 290px;
+		background: url(../images/visual02.jpg) no-repeat center;
+		height: 290px;background-size: cover;
 	}
 	#sub_header .depth2.sub02>ul>li{
 		float:left;width: 25%;
@@ -397,8 +396,8 @@
 
 	/*sub03*/
 	#sub_header .visual.sub03{
-		background: url(../images/visual03.jpg);
-		height: 240px;
+		background: url(../images/visual03.jpg) no-repeat center;
+		height: 240px;background-size: cover;
 	}
 	#sub_header .depth2.sub03>ul>li{
 		float:left;width: 25%;border-right:1px solid #a3a3a3;font-size:0.9em;
@@ -407,8 +406,9 @@
 
 	/*sub04*/
 	#sub_header .visual.sub04{
-		background: url(../images/visual04.jpg);
-		height: 290px;
+		background: url(../images/visual04.jpg) no-repeat center;
+		height: 290px;background-size: cover;
+		
 	}
 	#sub_header .depth2.sub04>ul>li{
 		float:left;width: 33.333%;border-right:1px solid #a3a3a3;font-size:0.9em;
@@ -425,8 +425,8 @@
 
 	/*sub05*/
 	#sub_header .visual.sub05{
-		background: url(../images/visual05.jpg);
-		height: 240px;
+		background: url(../images/visual05.jpg) no-repeat center;
+		height: 240px;background-size: cover;
 	}
 	#sub_header .depth2.sub05>ul>li{
 		float:left;width: 25%;border-right:1px solid #a3a3a3;font-size:0.9em;
@@ -435,14 +435,14 @@
 
 	/*sub06*/
 	#sub_header .visual.sub06{
-		background: url(../images/visual06.jpg);
-		height: 240px;
+		background: url(../images/visual06.jpg) no-repeat center;
+		height: 240px;background-size: cover;
+		
 	}
 	#sub_header .depth2.sub06>ul>li{
 		float:left;width: 50%;border-right:1px solid #a3a3a3;font-size:0.9em;
 		text-align:center;line-height:50px;
 	}
-
 	
 
 
