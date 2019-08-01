@@ -11,11 +11,11 @@
 	position: relative;
 }
 #header_top{
-	width:100%;height:50px;
+	width:100%;height:60px;
 	position: relative;background-color: #3f3f3f;
 }
-#header_top>a{display:block;width: 140px;padding:14px 20px;}
-#header_top>a>img{width: 140px;}
+#header_top>a{display:block;width: 145px;padding:18px 20px;}
+#header_top>a>img{width: 145px;}
 #header_top>.back{
 	position:fixed;width: 100%;height:100%;background-color:rgba(0,0,0,0.6);
 	z-index:99998;top: 0;display:none;
@@ -45,7 +45,7 @@
 
 
 #header_top > .toggleMenu{
-	width:25px;height:20px;position: absolute;top: 17px;right: 20px;
+	width:25px;height:20px;position: absolute;top: 22px;right: 20px;
 	cursor:pointer;z-index:1;display: block;
 }
 
@@ -59,9 +59,9 @@
 .toggleMenu .bar3{top:16px;left: 0;}
 
 .toggleMenu.change{position:fixed !important;z-index:999999 !important;}
-.toggleMenu.change .bar1{transform:rotate(-45deg);top:21px;background-color:#fff;}
+.toggleMenu.change .bar1{transform:rotate(-45deg);top:8px;background-color:#fff;}
 .toggleMenu.change .bar2{opacity:0;}
-.toggleMenu.change .bar3{transform:rotate(45deg);top:21px;background-color:#fff;}
+.toggleMenu.change .bar3{transform:rotate(45deg);top:8px;background-color:#fff;}
 
 
 .language{display:none;}
@@ -353,7 +353,7 @@
 /*sub 공통*/
 #sub_header .visual .visual_txt{
 	color:white;text-align:center;
-	position: absolute;top:110px;left:50%;transform:translateX(-50%);
+	position: absolute;top:115px;left:50%;transform:translateX(-50%);
 }
 #sub_header .visual .visual_txt>h3{font-size:2em;margin-bottom:15px;}
 #sub_header .visual .visual_txt>p{font-size:0.9em;}
@@ -369,7 +369,7 @@
 	/*sub01*/
 	#sub_header .visual.sub01{
 		background: url(../images/visual01.jpg) no-repeat center;
-		height: 250px;
+		height: 240px;
 		background-size:cover;
 	}
 	#sub_header .depth2.sub01>ul>li{
