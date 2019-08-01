@@ -300,6 +300,9 @@ body{min-width:1260px;}
 	position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);
 }
 
+/*video*/
+iframe{display:none;}
+
 /*section4*/
 .section4{width: 100%;}
 .section4>ul>li{
