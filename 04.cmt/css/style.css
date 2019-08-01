@@ -393,6 +393,8 @@
 	#sub_header .depth2.sub02>ul>li:nth-child(3),
 	#sub_header .depth2.sub02>ul>li:nth-child(4){border-bottom:1px solid #a3a3a3;}
 
+	#sub_header .depth2.sub02>ul>li:nth-child(4){border-right:0 none;}
+
 	/*sub03*/
 	#sub_header .visual.sub03{
 		background: url(../images/visual03.jpg);
