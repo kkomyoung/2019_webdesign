@@ -24,7 +24,6 @@
 #main_menu ul{
 	position: absolute;left:50%;top:50%;
 	transform:translate(-50%,-50%);
-	height:100%;padding:210px 0 ;
 }
 #main_menu ul li{padding:10px 0;}
 #main_menu ul li a{
