@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>블랙 소르베</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+</head>
+<script>
+	$(document).ready(function(){
+		$("#fullpage").fullpage({
+			anchors:["1st","2nd","3st","4st"],
+			menu:"#topMenu",
+			navigation:false,
+			afterLoad:function(anchorslink,index){
+					console.log("anchor:"+anchorslink+",index:"+index);
+					if(index == 2){
+						$(".icecream").addClass("move");
+					}else{
+						$(".icecream").removeClass("move");
+					}
+				}
+			
+		});
+	});
+</script>
+<style>
+	.move{top: 600px}
+</style>
+<body>
+	<div id="wrap">
+		<nav id="navTop">
+			<h1><a href="http://www.baskinrobbins.co.kr"target="blank"><img src="images/navTop/logo.png" alt="logo"></a></h1>
+			<ul class="topMenu clearfix">
+				<li><a href="#1st"><img src="images/navTop/menu01.png" alt="menu"></a></li>
+				<li><a href="#2nd"><img src="images/navTop/menu02.png" alt="menu"></a></li>
+				<li><a href="#3st"><img src="images/navTop/menu03.png" alt="menu"></a></li>
+				<li><a href="#4st"><img src="images/navTop/menu04.png" alt="menu"></a></li>
+			</ul>
+		</nav>
+		<div id="fullpage">
+			<div class="section" id="page01" data-anchor="1st">
+				<div class="contents">
+					<img src="images/page1/bg_img.png" alt="img" class="lemon">
+					<img src="images/page1/icecream.png" alt="img" class="icecream">
+					<img src="images/page1/title.png" alt="title" class="title">
+					<img src="images/page1/icon01.png" alt="img" class="icon01">
+				</div>
+				
+			</div>
+			<div class="section" id="page02" data-anchor="2nd">
+				<div class="contents">
+					<img src="images/page2/sub_title.png" alt="sub_title" class="sub_title">
+					<img src="images/page2/title.png" alt="title" class="title">
+				</div>
+			</div>
+			<div class="section" id="page03" data-anchor="3st">menu3</div>
+			<div class="section" id="page04" data-anchor="4st">menu4</div>
+		</div>
+	</div>
+</body>
+</html><span>

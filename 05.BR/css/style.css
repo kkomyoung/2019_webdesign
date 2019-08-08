@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+#wrap{}
+/*navTop*/
+#navTop{
+	position: fixed;height: 70px;width: 100%;z-index:5;
+	border-bottom:1px solid #777;
+}
+#navTop h1{
+	position: absolute;left: 95px;top: 19px;
+}
+#navTop ul.topMenu{
+	position: absolute;right:95px;top:24px;
+}
+#navTop li{float:left;margin-left:20px;}
+#navTop li a{display:block;}
+
+
+/*fullpage*/
+#fullpage{width: 100%;height:100%}
+
+/*page01*/
+#page01{
+	background: #fde425 url(../images/page1/bg_page01.jpg) no-repeat;
+}
+#page01 .contents{width: 100%;height: 100%;position: relative;}
+#page01 .contents img{position: absolute;}
+#page01 .contents img.lemon{display:block;width: 100%;height: 100%;top: 0px;left: 0px;}
+#page01 .contents img.icecream{
+	top: 363px;left:741px;z-index:10;transition:0.5s;
+}
+#page01 .contents img.icecream.move{
+	top: 1450px;
+}
+#page01 .contents img.title{top: 100px;left:694.5px;z-index:11;}
+#page01 .contents img.icon01{top: 564px;left: 57%;z-index:12;}
+
+
+/*icecream*/
+
+
+/*page02*/
+#page02{background: #9ccd3e url(../images/page2/bg_page02.jpg) no-repeat;}
+#page02 .contents img{position: absolute;}
+#page02 .contents img.sub_title{top: 110px;left:874px}
+#page02 .contents img.title{top: 160px;left:543px}
+
+
+
+/*page03*/
+#page03{background-color: #1a1512;}
+
+/*page04*/
+#page04{}
