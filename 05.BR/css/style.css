@@ -31,12 +31,13 @@
 #page01 .contents img.txt{left:17%;top: 490px;}
 
 
-/*page01 레몬움직임*/
+/*page01 레몬 정위치*/
+#page01 .contents .lemon{}
 #page01 .contents .lemon01 img{
 	left: 0;top: 364px;
 }
 #page01 .contents .lemon02 img{
-	left:10%;_left: 230px;top: 150px;
+	left:10%;top: 150px;
 }
 #page01 .contents .lemon03 img{
 	left:18%;top: 680px;
@@ -56,6 +57,25 @@
 #page01 .contents .lemon08 img{
 	right:0;top: 60px;
 }
+
+/*page01 레몬움직임*/
+#page01 .contents .lemon01 img.first,
+#page01 .contents .lemon02 img.first,
+#page01 .contents .lemon03 img.first,
+#page01 .contents .lemon05 img.first,
+#page01 .contents .lemon06 img.first,
+#page01 .contents .lemon07 img.first{
+	transform:translateY(-25px);opacity:0;transition:0.7s;
+}
+#page01 .contents .lemon01 img.first.start,
+#page01 .contents .lemon02 img.first.start,
+#page01 .contents .lemon03 img.first.start,
+#page01 .contents .lemon05 img.first.start,
+#page01 .contents .lemon06 img.first.start,
+#page01 .contents .lemon07 img.first.start{
+	transform:translateY(0);opacity:1;
+}
+
 
 
 /*page01 아이스크림 콘 움직임*/
