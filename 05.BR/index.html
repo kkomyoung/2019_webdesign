@@ -7,9 +7,11 @@
 	<title>블랙 소르베</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
 </head>
 <script>
 	$(document).ready(function(){
@@ -42,7 +44,14 @@
 					}
 					
 				}
-			
+		});
+
+		$("#page03 .slider li").css("height",550);
+		$(".slider").bxSlider({		
+			auto:true,
+			controls:false,
+			touchEnabled:false,
+
 		});
 	});
 </script>
@@ -116,17 +125,27 @@
 				</div>
 			</div>
 			<div class="section" id="page03" data-anchor="3st">
+
 				<div class="contents">
 					<img src="images/page3/sub_title.png" alt="sub_title" class="sub_title">
 					<img src="images/page3/title.png" alt="title" class="title">
-
-					<div class="slide">
-						<div class="cont">
-							<img src="images/page3/c_img01.png" alt="cont1" class="c_img01">
-							<img src="images/page3/c_box01.png" alt="cont1" class="c_box01">
-						</div>
-					</div>
 				</div>
+
+				<ul class="slider">
+					<li class="cont">
+						<img src="images/page3/c_img01.png" alt="cont1" class="c_img01">
+						<img src="images/page3/c_box01.png" alt="cont1" class="c_box01">
+					</li>
+					<li class="cont">
+						<img src="images/page3/c_img02.png" alt="cont2" class="c_img02">
+						<img src="images/page3/c_box02.png" alt="cont2" class="c_box02">
+					</li>
+					<li class="cont">
+						<img src="images/page3/c_img03.png" alt="cont3" class="c_img03">
+						<img src="images/page3/c_box03.png" alt="cont3" class="c_box03">
+					</li>
+				</ul>
+
 			</div>
 			<div class="section" id="page04" data-anchor="4st">
 				<div class="contents">
