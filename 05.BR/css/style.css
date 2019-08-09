@@ -24,39 +24,52 @@
 #fullpage{width: 100%;height:100%}
 
 /*page01*/
-#page01{
-	background-image:url(../images/page1/bg_page01.jpg);
-	background-position:center;
-	background-repeat:no-repeat;
-}
+#page01{background-color: #fde425;overflow:hidden;z-index:5;}
 #page01 .contents{width: 100%;height: 100%;position: relative;}
 #page01 .contents img{position: absolute;}
 
-/*page01 레몬 움직임*/
-/*#page01 .contents img.lemon{
-	display:block;width: 100%;height: 100%;
-	top: -20px;left: 0px;opacity:0;transition:1s;
-}*/
+#page01 .contents img.txt{left:17%;top: 490px;}
 
-#page01 img.lemon{
-	position: absolute;left:50%;
-	transform:translateX(-50%);
+
+/*page01 레몬움직임*/
+#page01 .contents .lemon01 img{
+	left: 0;top: 364px;
 }
-#page01 .contents img.lemon.start{
-	top: 0px;opacity:1;
+#page01 .contents .lemon02 img{
+	left:10%;_left: 230px;top: 150px;
+}
+#page01 .contents .lemon03 img{
+	left:18%;top: 680px;
+}
+#page01 .contents .lemon04 img{
+	left:25%;top: -25px;
+}
+#page01 .contents .lemon05 img{
+	right:18%;top: 190px;
+}
+#page01 .contents .lemon06 img{
+	right:14%;top: 554px;
+}
+#page01 .contents .lemon07 img{
+	right:0;top: 680px;
+}
+#page01 .contents .lemon08 img{
+	right:0;top: 60px;
 }
 
 
-/*아이스크림 콘 움직임*/
+/*page01 아이스크림 콘 움직임*/
 #page01 .contents img.icecream{
-	top: 363px;left:741px;transition:0.5s;z-index:10;
+	top: 363px;left:50%;transform:translateX(-50%);transition:0.7s;
 }
 #page01 .contents img.icecream.move{
 	top: 1450px;
 }
-#page01 .contents img.title{top: 100px;left:694.5px;z-index:11;}
+
+
+#page01 .contents img.title{top: 100px;left:50%;transform:translateX(-50%);}
 #page01 .contents img.icon01{
-	top: 564px;left: 57%;z-index:12;animation:icon .8s infinite alternate;
+	top: 564px;left: 57%;animation:icon .8s infinite alternate;
 }
 @keyframes icon{
 			from{transform:translate(-5px,-10px);}
@@ -64,15 +77,15 @@
 		}
 
 
-/*icecream*/
-
 
 /*page02*/
-#page02{background: #9ccd3e url(../images/page2/bg_page02.jpg) no-repeat;}
+#page02{background-color: #9ccd3e;}
 #page02 .contents{width: 100%;height: 100%;position: relative;}
 #page02 .contents img{position: absolute;}
-#page02 .contents img.sub_title{top: 110px;left:874px}
-#page02 .contents img.title{top: 160px;left:543px}
+
+#page02 .contents img.sub_title{top: 110px;left:50%;transform:translateX(-50%);}
+#page02 .contents img.title{top: 160px;left:50%;transform:translateX(-50%);}
+#page02 .contents img.txt{left:17%;top: 400px;}
 
 
 /*page02 레몬움직임*/
@@ -98,10 +111,21 @@
 		}
 
 
+
+/*page02 아이스크림 콘 움직임*/
+#page02 .contents img.icecream{
+	top: -575px;left:50%;transform:translateX(-50%);
+	transition:0.7s;
+}
+#page02 .contents img.icecream.move{
+	top: 510px;
+}
+
+
 /*page02 스쿱아이스크림*/
 #page02 .contents img.icecream2{
-	top: 0px;left:750px;z-index:12;opacity:0;
-	transition:0.5s;transition-delay:0.6s;
+	top: 0px;left:50%;transform:translateX(-50%);opacity:0;
+	transition:0.5s;transition-delay:0.7s;
 }
 #page02 .contents img.icecream2.drop{
 	top: 320px;opacity:1;
@@ -110,15 +134,19 @@
 
 
 /*page03*/
-#page03{background-color: #1a1512;z-index:11;}
+#page03{background-color: #1a1512;}
 #page03 .contents{width: 100%;height: 100%;position: relative;}
 #page03 .contents img{position: absolute;}
-#page03 .contents img.sub_title{top: 140px;left:874px}
-#page03 .contents img.title{top: 195px;left:683.5px}
+#page03 .contents img.sub_title{top: 140px;left:50%;transform:translateX(-50%);}
+#page03 .contents img.title{top: 195px;left:50%;transform:translateX(-50%);}
 
 /*slider*/
-#page03 .contents .slide img.c_img01{top: 370px;left: 346px;}
-#page03 .contents .slide img.c_box01{top: 370px;left:894px;}
+#page03 .contents .slide .cont{
+	width: 1270px;height: 500px;_background-color: blue;
+	position: absolute;top: 360px;left:50%;transform:translateX(-50%);
+}
+#page03 .contents .slide img.c_img01{position: absolute;top: 0px;left:15px;}
+#page03 .contents .slide img.c_box01{position: absolute;top: 0px;right:0px;}
 
 
 
@@ -128,6 +156,6 @@
 #page04{}
 #page04 .contents{width: 100%;height: 100%;position: relative;}
 #page04 .contents img{position: absolute;}
-#page04 .contents img.sub_title{top: 110px;left:874px}
-#page04 .contents img.title{top: 165px;left:540px}
-#page04 .contents img.text{top: 295px;left:455px}
+#page04 .contents img.sub_title{top: 110px;left:50%;transform:translateX(-50%);}
+#page04 .contents img.title{top: 165px;left:50%;transform:translateX(-50%);}
+#page04 .contents img.text{top: 295px;left:50%;transform:translateX(-50%);}
