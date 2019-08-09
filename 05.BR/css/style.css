@@ -228,3 +228,12 @@
 #page04 .contents img.sub_title{top: 110px;left:50%;transform:translateX(-50%);}
 #page04 .contents img.title{top: 165px;left:50%;transform:translateX(-50%);}
 #page04 .contents img.text{top: 295px;left:50%;transform:translateX(-50%);}
+
+
+
+/*down & top btn*/
+.down_btn{}
+.down_btn a{position: absolute;bottom: 5%;left:95px;
+}
+.down_btn a:hover{background-color: #fff;}
+.top_btn{position: absolute;bottom: 5%;left:95px;}
