@@ -18,29 +18,41 @@
 		$("#fullpage").fullpage({
 			anchors:["1st","2nd","3st","4st"],
 			menu:"#topMenu",
-			navigation:false,
+			navigation:true,
 			afterLoad:function(anchorslink,index){
 					console.log("anchor:"+anchorslink+",index:"+index);
 					if(index == 1){
 						$("#page01 .first").addClass("start");
+						$("#navTop li:nth-child(1)").addClass("on");
 					}else{
 						$("#page01 .first").removeClass("start");
+						$("#navTop li:nth-child(1)").removeClass("on");
 					}
 
 					if(index == 2){
 						$("#page01 .icecream").addClass("move");
 						$("#page02 .icecream").addClass("move");
 						$(".icecream2").addClass("drop");
+						$("#navTop li:nth-child(2)").addClass("on");
 					}else{
 						$("#page01 .icecream").removeClass("move");
 						$("#page02 .icecream").removeClass("move");
 						$(".icecream2").removeClass("drop");
+						$("#navTop li:nth-child(2)").removeClass("on");
 					}
 
 					if(index == 3){
 						$("#navTop").addClass("color");
+						$("#navTop li:nth-child(3)").addClass("on");
 					}else{
 						$("#navTop").removeClass("color");
+						$("#navTop li:nth-child(3)").removeClass("on");
+					}
+
+					if(index == 4){
+						$("#navTop li:nth-child(4)").addClass("on");
+					}else{
+						$("#navTop li:nth-child(4)").removeClass("on");
 					}
 					
 				}
@@ -155,6 +167,27 @@
 					<img src="images/page4/sub_title.png" alt="img" class="sub_title">
 					<img src="images/page4/title.png" alt="img" class="title">
 					<img src="images/page4/text.png" alt="img" class="text">
+				</div>
+				<div class="photo">
+					<ul class="clearfix">
+						<li><a href="#"><img src="images/page4/sns01.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns02.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns03.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns04.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns05.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns06.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns07.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns08.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns09.jpg" alt="img"></a></li>
+						<li><a href="#"><img src="images/page4/sns10.jpg" alt="img"></a></li>
+					</ul>
+				</div>
+				<div class="back"></div>
+				<div class="pop">
+					<ul class="clearfix">
+						<li class="sns_img"><img src="images/page4/sns_img01.jpg" alt="img"></li>
+						<li class="sns_txt"></li>
+					</ul>
 				</div>
 				<div class="top_btn"><a href="#1st"><img src="images/top_btn.png" alt="btn"></a></div>
 			</div>

@@ -186,8 +186,8 @@ html.fp-enabled,
     border: 0;
 }
 
-/*nav*/
-#fp-nav{
+/*nav 수정전*/
+/*#fp-nav{
     position:fixed;right:20px;width: 100px;
     background-color: skyblue;
     top: 50%;
@@ -209,4 +209,42 @@ html.fp-enabled,
 #fp-nav ul li:hover span{width:100px;}
 #fp-nav ul li:hover .fp-tooltip{display:block;background-color: #f00;}
 
-#fp-nav ul li a.active + .fp-tooltip{display:block;}
+#fp-nav ul li a.active + .fp-tooltip{display:block;}*/
+
+
+/*nav 수정후*/
+#fp-nav{
+    position:fixed;right:25px;width: 43px;
+    
+    top: 50%;
+}
+#fp-nav ul{}
+#fp-nav ul li{
+    position: relative;
+    margin-bottom:13px;
+}
+#fp-nav ul li a{display: block;height: 43px;}
+
+#fp-nav ul li a span{
+    display:block;width: 43px;height: 43px;
+    border-radius:22px;border: 1px solid #888;
+    transition:0.3s;position: absolute;right: 0;
+}
+#fp-nav ul li:nth-child(1) a span{background:url(../images/fp_nav/menu01_icon.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:nth-child(2) a span{background:url(../images/fp_nav/menu02_icon.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:nth-child(3) a span{background:url(../images/fp_nav/menu03_icon.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:nth-child(4) a span{background:url(../images/fp_nav/menu04_icon.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+
+#fp-nav ul li:hover span{width:155px;background-color: #fff;}
+#fp-nav ul li:hover:nth-child(1) a span{background:url(../images/fp_nav/menu01.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:hover:nth-child(2) a span{background:url(../images/fp_nav/menu02.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:hover:nth-child(3) a span{background:url(../images/fp_nav/menu03.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+#fp-nav ul li:hover:nth-child(4) a span{background:url(../images/fp_nav/menu04.png) no-repeat;background-color: rgba(255,255,255,0.5);}
+
+#fp-nav ul li a.active span{width: 155px;border: 1px solid #000;}
+#fp-nav ul li:nth-child(1) a.active span{background:url(../images/fp_nav/menu01.png) no-repeat;background-color: #fff;}
+#fp-nav ul li:nth-child(2) a.active span{background:url(../images/fp_nav/menu02.png) no-repeat;background-color: #fff;}
+#fp-nav ul li:nth-child(3) a.active span{background:url(../images/fp_nav/menu03.png) no-repeat;background-color: #fff;}
+#fp-nav ul li:nth-child(4) a.active span{background:url(../images/fp_nav/menu04.png) no-repeat;background-color: #fff;}
+
+#fp-nav ul li a.active{display:block;}
