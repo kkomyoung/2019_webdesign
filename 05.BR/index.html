@@ -15,6 +15,7 @@
 </head>
 <script>
 	$(document).ready(function(){
+		 
 		$("#fullpage").fullpage({
 			anchors:["1st","2nd","3st","4st"],
 			menu:"#topMenu",
@@ -53,6 +54,7 @@
 						$("#navTop li:nth-child(4)").addClass("on");
 					}else{
 						$("#navTop li:nth-child(4)").removeClass("on");
+						$(".popUp").hide();
 					}
 					
 				}
@@ -65,6 +67,16 @@
 			touchEnabled:false,
 
 		});
+
+		$(".photo>ul>li").click(function(){
+			$(".popUp").fadeIn();
+		});
+
+		$(".back").click(function(){
+			$(".popUp").fadeOut();
+		});
+
+
 	});
 </script>
 
@@ -182,12 +194,34 @@
 						<li><a href="#"><img src="images/page4/sns10.jpg" alt="img"></a></li>
 					</ul>
 				</div>
-				<div class="back"></div>
-				<div class="pop">
-					<ul class="clearfix">
-						<li class="sns_img"><img src="images/page4/sns_img01.jpg" alt="img"></li>
-						<li class="sns_txt"></li>
-					</ul>
+				<div class="popUp">
+					<div class="back">
+						<div class="close_btn"><img src="images/page4/close_btn.png" alt="close"></div>
+					</div>
+					<div class="pop">
+						<ul class="clearfix">
+							<li class="sns_img"><img src="images/page4/sns_img01.jpg" alt="img"></li>
+							<li class="sns_txt">
+								<div class="user">
+									<div class="user_img"></div>
+									<div class="ID">happy_kya754</div>
+									<div class="time">9 days ago</div>
+									<div class="insta_logo"><a href="#"><img src="images/page4/insta_icon.png" alt="icon"></a></div>
+								</div>
+								<div class="txt">
+									<p>심심할 땐 역시 아이스크림🍦🍧</p>
+									<p class="tag">#블랙소르베 #배스킨라빈스 #이달의 맛</p>
+								</div>
+								<div class="sns_icon">
+									<ul>
+										<li>좋아요</li>
+										<li>댓글</li>
+										<li>공유</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="top_btn"><a href="#1st"><img src="images/top_btn.png" alt="btn"></a></div>
 			</div>

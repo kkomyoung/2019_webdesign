@@ -252,21 +252,66 @@
 
 #page04 .photo>ul>li:hover{opacity:0.5;}
 
+
+/*pop*/
+#page04 .popUp{display:none;}
+
 #page04 .back{
 	width: 100%;height: 100%;
 	background-color: #000;opacity:0.7;
+	position: absolute;top: 0;left: 0;
 }
+#page04 .back .close_btn{position: absolute;right:30px;top: 100px;cursor:pointer;}
+#page04 .back .close_btn>img{display:block;width: 20px;height: 20px;}
+
+
+
 #page04 .pop{
 	position: absolute;top: 50%;left:50%;
 	transform:translate(-50%,-50%);
-	width: 1200px;height: 600px;
+	width: 1000px;height: 600px;
 	background-color: pink;
 }
-#page04 .pop ul{}
-#page04 .pop li{float:left;width: 50%;height:600px;}
-#page04 .pop li.sns_img{background-color: blue;overflow:hidden;position: relative;}
+#page04 .pop li{float:left;height:600px;}
+#page04 .pop li.sns_img{width: 600px;background-color: blue;overflow:hidden;position: relative;}
 #page04 .pop li.sns_img img{display:block;width: 100%;position: absolute;top: -40px;}
-#page04 .pop li.sns_txt{background-color: #fff;}
+
+#page04 .pop li.sns_txt{width: 400px;background-color: #fff;padding:20px;}
+#page04 .pop li.sns_txt .user{
+	width: 100%;height: 44px;position: relative;
+}
+#page04 .pop li.sns_txt .user div{position: absolute;}
+#page04 .pop li.sns_txt .user div.user_img{
+	width: 44px;height: 44px;border-radius:22px;
+	background: url(../images/page4/user_img.jpg);
+	cursor:pointer;
+}
+#page04 .pop li.sns_txt .user div.ID{
+	color:#336699;left:55px;top: 2px;
+}
+#page04 .pop li.sns_txt .user div.time{
+	color:#777;left:55px;bottom: 2px;font-size:0.8em;
+}
+#page04 .pop li.sns_txt .user div.insta_logo{
+	right:0;top: 50%;transform: translateY(-50%);
+}
+#page04 .pop li.sns_txt .txt{padding-top:20px;height:460px;}
+#page04 .pop li.sns_txt .txt>p{font-size:0.9em;}
+#page04 .pop li.sns_txt .txt>p.tag{color:#336699;padding-top:3px;}
+
+#page04 .pop .sns_icon{
+	width: 100%;height: 50px;;
+	border-top: 1px solid #e7e7e7;
+}
+#page04 .pop .sns_icon>ul{padding-top:25px;}
+#page04 .pop .sns_icon>ul>li{
+	background: url(../images/page4/embed_icon.png);
+	text-indent:-9999px;margin-right:15px;cursor:pointer;
+}
+#page04 .pop .sns_icon>ul>li:nth-child(1){width: 20px;height: 17.3px;background-position:0 0;}
+#page04 .pop .sns_icon>ul>li:nth-child(3){width: 20px;height: 18px;background-position:0 18px;}
+#page04 .pop .sns_icon>ul>li:nth-child(2){width: 20px;height: 17.3px;background-position:0 36px;}
+
 
 /*down & top btn*/
 .down_btn a{position: absolute;bottom: 5%;
