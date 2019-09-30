@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*font*/
+*{font-family: 'Noto Sans KR', sans-serif;color:#3a3839;}
+h1{font-size:83px;font-weight:900;}
+h2{font-size:40px;font-weight:900;}
+.intro_txt p{font-size:21px;font-weight:900;}
+
+/*layout*/
+html, body{height:100%;}
+#wrap{width: 100%;height:100%;background-color: #fbfbfb;}
+
+/*intro*/
+#intro{height:100%;padding:100px 120px;position: relative;}
+
+.point_line{
+	height:35px;background-color: #24ff00;
+	position: absolute;top: 527px;
+	animation: move 0.7s ease-out 0.8s forwards;
+}
+@keyframes move{
+ 	0%{width: 1000px;left:-1000px;}
+ 	50%{width: 530px;}
+ 	80%{left:300px;left:500px;}
+ 	100%{width: 530px;left:360px;}
+}
+
+.circle{
+	width: 1300px;height: 1300px;border-radius:650px;background-color: #3a3839;
+	position: absolute;right:-450px;bottom: 200px;
+}
+
+.intro_txt{float:left;height:100%;width: 70%;position: relative;}
+.intro_txt h1{position: absolute;left:240px;top:220px}
+.intro_txt .email{position: absolute;left:0;bottom: 0;}
+
+.intro_menu{float:left;width: 30%;height:100%;position: relative;z-index:2;}
+.intro_menu ul{float:right;}
+.intro_menu ul li{margin-bottom:10px;text-align:right;}
+.intro_menu a{color:#fbfbfb;transition:0.5s;}
+.intro_menu a:hover{color:#24ff00;}
+
+/*about_me*/
+#about_me{width: 100%;height:100%;background-color: #3a3839;}
+#about_me h1{color:#fbfbfb;}
