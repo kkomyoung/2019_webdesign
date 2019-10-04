@@ -23,7 +23,6 @@
 				$(".language > ul > li").removeClass();
 				$(this).addClass("active");
 			});
-
 			var myslider =$('.slider').bxSlider({
 				mode:'horizontal',
 				auto:true,
@@ -38,7 +37,6 @@
 				myslider.goToNextSlide();
 				return false;
 			});
-
 			var myslider2 =$('.slider2').bxSlider({
 				mode:'fade',
 				auto:true,
@@ -54,10 +52,7 @@
 				myslider2.goToNextSlide();
 				return false;
 			});
-
 			$(".youtube").colorbox({iframe:true,innerWidth:600,innerHeight:338});
-
-
 			$(".toggleMenu").click(function(){
 				var myClass = $(this).attr("class");
 				console.log(myClass);
@@ -71,7 +66,6 @@
 					$(".back").hide();
 				}
 			});
-
 			$(window).resize(function(){
 				var wSize = $(window).width();
 				console.log(wSize);
@@ -84,12 +78,9 @@
 					$("#header_top").find(".back").hide();
 					$("#main_menu").css({right:"-100%"});
 				}
-
 			});
 		});
-
 		new WOW().init();
-
 	</script>
 </head>
 <body>
@@ -416,5 +407,3 @@
 	</footer>
 </body>
 </html>
-
-												

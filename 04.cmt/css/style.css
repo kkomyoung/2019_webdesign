@@ -105,6 +105,11 @@
 	background:url(../images/mainimg04.jpg) no-repeat center;
 	background-size:cover;
 }
+.slider_wrap li.third{
+	background:url(../images/mainimg05.jpg) no-repeat center;
+	background-size:cover;
+}
+
 
 .slider_wrap .slider_txt{
 	width:700px;position: absolute;left:50%;margin-left:-350px;

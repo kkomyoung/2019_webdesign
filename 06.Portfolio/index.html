@@ -7,7 +7,32 @@
 	<title>김영애의 포트폴리오</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet"></head>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/all.js"></script>
+	
+
+</head>
+<script>
+	$(document).mousewheel(function(event,delta){
+			console.log(delta);
+			//delta 마우스 휠 up:양수 down:음수
+
+			$(window).scroll(function(){
+				var winTop = $(this).scrollTop();
+				if(winTop > 3000){
+					if(delta < 0){
+						$(".gnb_menu").addClass("fixed");
+					}	
+					}else{
+						$(".gnb_menu").removeClass("fixed");
+					}
+			});
+		});
+</script>
+<style>
+	.gnb_menu.fixed{position: fixed;}
+</style>
 <body>
 	<div id="wrap">
 		<header id="intro" class="clearfix">
@@ -30,12 +55,230 @@
 				</ul>
 			</nav>
 		</header>
-		<section id="about_me">
-			<h1>ABOUT<br>ME</h1>
+		<section id="about">
+			<nav class="gnb_menu">
+			<ul class="clearfix">
+				<li><a href="#">ABOUT ME</a></li>
+				<li><a href="#">PUBLISHING</a></li>
+				<li><a href="#">CLIENT</a></li>
+				<li><a href="#">WORKS</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+		</nav>
+			<div class="about_wrap">
+				<h1>ABOUT<br>ME</h1>
+			</div>
 		</section>
-		<section id="publishing"></section>
-		<section id="client"></section>
-		<section id="contact"></section>
+		<section id="publishing">
+			<div class="publishing_wrap">
+				<h1>PUBLISHING</h1>
+				<div class="left clearfix">
+					<div class="txt_wrap">
+						<div class="num">1</div>
+						<div class="txt">
+							<h2>배스킨라빈스 블랙소르베</h2>
+							<p class="gray">퍼블리싱 100% / 디자인 100%</p>
+							<p>
+								jQuery fullpage 플러그인을 적용한 풀페이지 화면<br>
+								CSS Animation, transition을 활용한 애니메이션 효과<br>
+								그누보드 게시판 적용, 모듈 팝업창 구현
+							</p>
+							<div class="btn clearfix">
+								<div class="btn_url"><a href="#">URL</a></div>
+								<div class="btn_more"><a href="#">더보기</a></div>
+							</div>
+						</div>
+					</div>
+					<img src="images/publishing_black.png" alt="monitor">
+				</div>
+				<div class="right clearfix">
+					<img src="images/publishing_cmt.png" alt="monitor">
+					<div class="txt_wrap">
+						<div class="num">2</div>
+						<div class="txt">
+							<h2>CMT 정보통신</h2>
+							<p class="gray">퍼블리싱 100% / 디자인 100%</p>
+							<p>
+								CSS media queries를 이용한 반응형 홈페이지<br>
+								jQuery bxSlider를 적용한 이미지 슬라이드<br>
+								JavaScript를 이용한 서브 탭 메뉴 구현
+							</p>
+							<div class="btn clearfix">
+								<div class="btn_url"><a href="#">URL</a></div>
+								<div class="btn_more"><a href="#">더보기</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="left clearfix">
+					<div class="txt_wrap">
+						<div class="num">3</div>
+						<div class="txt">
+							<h2>역전우동 0410</h2>
+							<p class="gray">퍼블리싱 100% / 디자인 100%</p>
+							<p>
+								그누보드 기반 홈페이지<br>
+								PHP파일 수정 작업<br>
+								Editor Plus로 FTP 업로드 작업<br>
+								jQuery scroll 이벤트 적용하여 메뉴바 이동<br>
+								폼문서 사용
+							</p>
+							<div class="btn clearfix">
+								<div class="btn_url"><a href="#">URL</a></div>
+								<div class="btn_more"><a href="#">더보기</a></div>
+							</div>
+						</div>
+					</div>
+					<img src="images/publishing_udon.png" alt="monitor">
+				</div>
+				<div class="right clearfix">
+					<img src="images/publishing_seoul.png" alt="monitor">
+					<div class="txt_wrap">
+						<div class="num">4</div>
+						<div class="txt">
+							<h2>서울세계불꽃축제</h2>
+							<p class="gray">퍼블리싱 100% / 디자인 100%</p>
+							<p>
+								워드프레스 기반 반응형 홈페이지<br>
+								테마 편집기를 사용하여 스타일시트 수정<br>
+								FAQ, WPforms 플러그인 사용<br>
+								그누프레스 게시판 사용
+							</p>
+							<div class="btn clearfix">
+								<div class="btn_url"><a href="#">URL</a></div>
+								<div class="btn_more"><a href="#">더보기</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="client">
+			<div class="client_wrap">
+				<h1>CLIENT</h1>
+				<div class="box clearfix">
+					<div class="img_box">
+						<img src="images/client_samwoo.jpg" alt="img">
+						<a href="#">홈페이지 바로가기 <i class="fas fa-search" ></i></a>
+					</div>
+					<div class="txt_wrap">
+						<div class="txt clearfix">
+							<h2>(주)삼우건설산업</h2>
+							<p>건설회사 홈페이지 제작, 브랜드 디자인</p>
+							<div class="title_wrap">
+								<div class="title">
+									<p>작업기간<br>
+									작업내용</p>
+								</div>
+								<div class="line1"></div>
+								<div class="line2"></div>
+							</div>
+							<div class="substance">
+								<p>2017.12 - 2018.09<br>
+								<b>카페24 홈페이지 스킨 수정</b><br>
+								유지 보수, 사진촬영 및 보정<br>
+								로고, 명함 디자인</p>
+							</div>
+						</div>
+						<div class="more_btn">
+							<a href="#">자세히 보기</a>
+						</div>
+					</div>
+				</div>
+				<div class="box clearfix">
+					<div class="img_box">
+						<img src="images/client_safe09.jpg" alt="img">
+						<a href="#">홈페이지 바로가기 <i class="fas fa-search"></i></a>
+					</div>
+					<div class="txt_wrap">
+						<div class="txt clearfix">
+							<h2>세이프공구</h2>
+							<p>공구 쇼핑몰 제작, 브랜드 디자인</p>
+							<div class="title_wrap">
+								<div class="title">
+									<p>작업기간<br>
+									작업내용</p>
+								</div>
+								<div class="line1"></div>
+								<div class="line2"></div>
+							</div>
+							<div class="substance">
+								<p>2017.12 - 2018.09<br>
+								<b>카페24 홈페이지 스킨 수정</b><br>
+								유지 보수, 네이버 광고 등록<br>
+								로고, 명함, 팜플렛 등 제작<br>
+								상품 촬영 및 등록</p>
+							</div>
+						</div>
+						<div class="more_btn"><a href="#">자세히 보기</a></div>
+					</div>
+				</div>
+				<div class="box clearfix">
+					<div class="img_box">
+						<img src="images/client_roomnara24.jpg" alt="img">
+						<a href="#">홈페이지 바로가기 <i class="fas fa-search"></i></a>
+					</div>
+					<div class="txt_wrap">
+						<div class="txt clearfix">
+							<h2>원룸나라이사</h2>
+							<p>이삿짐 홈페이지 제작, 브랜드 디자인</p>
+							<div class="title_wrap">
+								<div class="title">
+									<p>작업기간<br>
+									작업내용</p>
+								</div>
+								<div class="line1"></div>
+								<div class="line2"></div>
+							</div>
+							<div class="substance">
+								<p>2018.04 - 2019.10<br>
+								<b>카페24 홈페이지 스킨 수정</b><br>
+								유지 보수, 네이버 광고 등록<br>
+								로고, 명함 디자인</p>
+							</div>
+						</div>
+						<div class="more_btn"><a href="#">자세히 보기</a></div>
+					</div>
+				</div>
+				<div class="box clearfix">
+					<div class="img_box">
+						<img src="images/client_life24.jpg" alt="img">
+						<a href="#">홈페이지 바로가기 <i class="fas fa-search"></i></a>
+					</div>
+					<div class="txt_wrap">
+						<div class="txt clearfix">
+							<h2>라이프이사</h2>
+							<p>이삿짐 홈페이지 제작</p>
+							<div class="title_wrap">
+								<div class="title">
+									<p>작업기간<br>
+									작업내용</p>
+								</div>
+								<div class="line1"></div>
+								<div class="line2"></div>
+							</div>
+							<div class="substance">
+								<p>2019.01 - 2019.02<br>
+								<b>카페24 홈페이지 스킨 수정</b><br>
+								유지 보수, 로고 제작<br>
+								네이버 광고 등록</p>
+							</div>
+						</div>
+						<div class="more_btn"><a href="#">자세히 보기</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="works">
+			<div class="works_wrap">
+				<h1>WORKS</h1>
+			</div>
+		</section>
+		<section id="contact">
+			<div class="contact_wrap">
+				<h1>CONTACT</h1>
+			</div>
+		</section>
 	</div>
 </body>
 </html>
