@@ -109,7 +109,11 @@ html, body{height:100%;}
 	float:left;width: 400px;height:100%;padding:40px;
 	position: relative;background-color: #fbfbfb;
 }
-.client_wrap .img_box{width: 800px;height:450px;float:left;position: relative;}
+.client_wrap .img_box{
+	width: 800px;height:450px;float:left;position: relative;overflow:hidden;
+}
+.client_wrap .img_box img{transition: 0.3s}
+.client_wrap .img_box:hover img{transform:scale(1.1);}
 .client_wrap .img_box a{
 	opacity:0;width: 100%;line-height:450px;text-align:center;
 	background-color: rgba(0,0,0,0.5);color:#fff;font-weight:500;
@@ -128,7 +132,8 @@ html, body{height:100%;}
 	width: 320px;line-height:50px;text-align:center;
 	background-color: #3a3839;position: absolute;bottom: 40px;
 }
-.client_wrap .more_btn a{display:block;color:#fbfbfb;font-weight:500;}
+.client_wrap .more_btn a{display:block;color:#fbfbfb;font-weight:500;transition:0.3s;}
+.client_wrap .more_btn:hover a{background-color:#000;}
 
 
 /*works*/
