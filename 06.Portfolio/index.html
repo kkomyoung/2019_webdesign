@@ -9,30 +9,11 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/common.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/all.js"></script>
-	
-
 </head>
-<script>
-	$(document).mousewheel(function(event,delta){
-			console.log(delta);
-			//delta 마우스 휠 up:양수 down:음수
-
-			$(window).scroll(function(){
-				var winTop = $(this).scrollTop();
-				if(winTop > 3000){
-					if(delta < 0){
-						$(".gnb_menu").addClass("fixed");
-					}	
-					}else{
-						$(".gnb_menu").removeClass("fixed");
-					}
-			});
-		});
-</script>
-<style>
-	.gnb_menu.fixed{position: fixed;}
-</style>
 <body>
 	<div id="wrap">
 		<header id="intro" class="clearfix">
@@ -56,15 +37,15 @@
 			</nav>
 		</header>
 		<section id="about">
-			<nav class="gnb_menu">
-			<ul class="clearfix">
-				<li><a href="#">ABOUT ME</a></li>
-				<li><a href="#">PUBLISHING</a></li>
-				<li><a href="#">CLIENT</a></li>
-				<li><a href="#">WORKS</a></li>
-				<li><a href="#">CONTACT</a></li>
-			</ul>
-		</nav>
+				<nav class="gnb_menu">
+					<ul class="clearfix">
+						<li><a href="#">ABOUT ME</a></li>
+						<li><a href="#">PUBLISHING</a></li>
+						<li><a href="#">CLIENT</a></li>
+						<li><a href="#">WORKS</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</nav>
 			<div class="about_wrap">
 				<h1>ABOUT<br>ME</h1>
 			</div>
