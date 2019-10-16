@@ -36,9 +36,15 @@ $(document).ready(function(){
 		});
 	});
 
+<<<<<<< HEAD
 	// $('.gnb_menu li:nth-child(1) a').click(function(){
  //        $('html').animate({scrollTop : aboutPos.top}, 500);
 	// });
+=======
+	$('.gnb_menu li:nth-child(1) a').click(function(){
+        $('html').animate({scrollTop : aboutPos.top}, 500);
+	});
+>>>>>>> 9a651a900bc838b3309fa1cd0b11851596f9b61a
 });
 
 
