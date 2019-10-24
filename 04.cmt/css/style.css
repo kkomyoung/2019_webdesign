@@ -1,7 +1,11 @@
 @charset "utf-8";
+
 @import "pc.css" all and (min-width:961px);
 @import "tablet.css" all and (max-width:960px);
 @media all and (max-width:630px){
+
+
+
 
 /*Header*/
 #main_header{
@@ -324,7 +328,7 @@
 }
 
 /*video*/
-iframe{margin-bottom:15px;width: 100%;height:220px;}
+iframe.youtube{margin-bottom:15px;width: 100%;height:220px;}
 
 /*section4*/
 .section4{width: 100%;}
@@ -454,6 +458,9 @@ iframe{margin-bottom:15px;width: 100%;height:220px;}
 	.contents_wrap{
 		width: 100%;
 	}
+
+	.sub_container{padding-top:40px;}
+
 	#sub_contents .location{display:none;}
 	#sub_contents .location>ul{margin-left:20px;}
 	#sub_contents .location>ul>li{float:left;padding:30px 5px;}
@@ -477,13 +484,6 @@ iframe{margin-bottom:15px;width: 100%;height:220px;}
 
 	#sub_contents>div{display:none;}
 	#sub_contents>div:nth-child(1){display:block;}
-	
-	
-	#sub_contents img.sub_img{
-		width: 100%;
-		padding:0 20px;
-		margin-bottom:0;
-	}
 
 	
 	/*sub06 고객CRM*/
@@ -492,6 +492,36 @@ iframe{margin-bottom:15px;width: 100%;height:220px;}
 		margin:0 auto;text-align:center;border: 1px solid #4b75e3;color:#4b75e3;
 	}
 	a.crm:hover{background-color: #4b75e3;color:white;}
+
+	/*table*/
+	.table{}
+	.table li{
+		float:left;width: 100%;background-color: #3f434e;
+		margin-bottom:5%;border:1px solid #e7e7e7;
+	}
+	.table li:nth-child(2n-1){margin-right:5%;}
+	.table li .table_title{
+		width: 100%;height:100px;background-color: #f2f5fa;
+		border-top:3px solid #3f434e;padding:20px;transition:0.3s;
+		font-weight:800;font-size:1.1em;line-height: 1.5;
+	}
+	.table li .table_text{
+		width: 100%;line-height:50px;background-color: #fff;
+		padding:20px;transition:0.3s;
+	}
+
+	.table li a:hover .table_title,
+	.table li a:hover .table_text
+	{opacity:0.9;}
+
+	.pagination{width: 100%;padding:20px 0;}
+	.pagination .page_wrap{width: 200px;margin:0 auto;}
+	.pagination .page_wrap a{
+		float: left;width: 40px;height: 40px;
+		line-height: 40px;border: 1px solid #aaa;
+		text-align: center;margin:0 5px;border-radius:20px;}
+	.pagination a:hover{background-color: #eee;}
+	.pagination a.active{background-color: #eee;}	
 
 
 
